@@ -1,0 +1,5 @@
+D:\Projects\EpicTradeShop\src\Product\Product.Domain\obj\Debug\net7.0\Product.Domain.csproj.AssemblyReference.cache
+D:\Projects\EpicTradeShop\src\Product\Product.Domain\obj\Debug\net7.0\Product.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\EpicTradeShop\src\Product\Product.Domain\obj\Debug\net7.0\Product.Domain.AssemblyInfoInputs.cache
+D:\Projects\EpicTradeShop\src\Product\Product.Domain\obj\Debug\net7.0\Product.Domain.AssemblyInfo.cs
+D:\Projects\EpicTradeShop\src\Product\Product.Domain\obj\Debug\net7.0\Product.Domain.csproj.CoreCompileInputs.cache
