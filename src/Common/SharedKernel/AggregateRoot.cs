@@ -1,11 +1,11 @@
 ﻿namespace SharedKernel;
 
 public abstract class AggregateRoot
-    : Entity, IAggregateRoot
+    : GuidKeyEntity, IAggregateRoot
 {
     private readonly List<IDomainEvent> _domainEvents = new();
 
-    protected AggregateRoot(Guid id) 
+    protected AggregateRoot(ID id) 
         : base(id) {}
 
     public IReadOnlyCollection<IDomainEvent> DomainEvents 

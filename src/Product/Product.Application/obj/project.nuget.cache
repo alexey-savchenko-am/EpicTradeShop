@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JB+gSvp+9oqGvnfx7ytzTMT2dytdlHJwziO3m3U30MfzGfzjDZQxV+LnZbrYIKA27mUiALw2xCXghCNbgWhj9g==",
+  "dgSpecHash": "jMunTHn92bOxKkKJHkahoUvUv94T2yM5UfTjVgyUwgbmeMhrnESublVCRZeH3Qqy71CPBQP7wZHsw+mAzvOTGQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\EpicTradeShop\\src\\Product\\Product.Application\\Product.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\GORN\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\GORN\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\GORN\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
