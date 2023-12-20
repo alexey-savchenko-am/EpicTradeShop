@@ -11,4 +11,9 @@ internal class ProductRepository
 	public ProductRepository(DbContext dbContext)
 		: base(dbContext)
 	{}
+
+    public Task<bool> IsProductExistsAsync(string productName)
+    {
+        return Set.AnyAsync(product => product.Name == productName);
+    }
 }

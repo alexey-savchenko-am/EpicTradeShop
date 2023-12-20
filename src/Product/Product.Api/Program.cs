@@ -1,21 +1,23 @@
-var builder = WebApplication.CreateBuilder(args);
+using Product.Application;
+using Product.Infrastructure;
+using Presentation;
 
-// Add services to the container.
-builder.Services.AddRazorPages();
 
-var app = builder.Build();
+var server = new ProductServer(args);
+server.BuildAndRun();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+public class ProductServer : Server
 {
-    app.UseExceptionHandler("/Error");
+    public ProductServer(string[] args)
+        : base(args, "ProductService")
+    {
+    }
+
+    protected override void ConfigureSpecificServices(IServiceCollection services)
+    {
+        services
+            .AddApplication()
+            .AddInfrastructure();
+    }
 }
-app.UseStaticFiles();
 
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapRazorPages();
-
-app.Run();

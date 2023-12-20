@@ -1,25 +1,10 @@
 {
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:29629",
-      "sslPort": 0
-    }
-  },
   "profiles": {
-    "http": {
+    "EpicTradeStore.Product": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5273",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
+      "launchUrl": "swagger/index.html",
+      "applicationUrl": "https://localhost:8080/;http://localhost:44301/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

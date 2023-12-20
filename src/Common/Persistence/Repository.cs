@@ -9,6 +9,7 @@ public abstract class Repository<TAggregateRoot>
     where TAggregateRoot : AggregateRoot
 {
     protected DbContext DbContext { get; }
+    protected DbSet<TAggregateRoot> Set { get; }
 
     public Repository(DbContext dbContext)
     {

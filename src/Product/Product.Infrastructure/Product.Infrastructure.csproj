@@ -6,9 +6,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
     <ProjectReference Include="..\..\Common\Persistence\Persistence.csproj" />
     <ProjectReference Include="..\Product.Application\Product.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BackgroundJobs\" />
+    <Folder Include="Data\Config\" />
   </ItemGroup>
 
 </Project>
