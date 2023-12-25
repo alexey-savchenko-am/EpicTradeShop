@@ -6,7 +6,7 @@ using Presentation;
 var server = new ProductServer(args);
 server.BuildAndRun();
 
-public class ProductServer : Server
+public class ProductServer : WebServer
 {
     public ProductServer(string[] args)
         : base(args, "ProductService")

@@ -1,7 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AppCommon.Persistence;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Persistence;
+using Product.Application.Abstract;
+using Product.Infrastructure.Data.Repositories;
 
 namespace Product.Infrastructure;
 
@@ -26,12 +29,9 @@ public static class DependencyInjection
             builder.EnableDetailedErrors(options.EnableDetailedErrors);
             builder.EnableSensitiveDataLogging(options.EnableSensitiveDataLogging);
         });
-/*
-        services.AddScoped<IDatabaseInitializer, WarehouseDbContextSeed>();
+
         services.AddScoped<IUnitOfWork, UnitOfWork>();
-        services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-        services.AddScoped<IReceiptOrderRepository, ReceiptOrderRepository>();
-        services.AddScoped<ISupplierOrderRepository, SupplierOrderRepository>();*/
+        services.AddScoped<IProductRepository, ProductRepository>();
 
         return services;
     }

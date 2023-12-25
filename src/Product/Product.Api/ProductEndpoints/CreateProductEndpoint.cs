@@ -11,9 +11,9 @@ public sealed class CreateProductEndpoint
 {
     private readonly ISender _sender;
 
-    public CreateProductEndpoint()
+    public CreateProductEndpoint(ISender sender)
     {
-        _sender = null;
+        _sender = sender;
     }
 
     public void AddRoute(IEndpointRouteBuilder app)

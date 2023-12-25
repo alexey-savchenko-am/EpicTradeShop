@@ -4,22 +4,31 @@ using SharedKernel.Output;
 namespace Product.Domain.Entities.ProductAggregate;
 
 public class Category
-    : ValueObject
+    : GuidKeyEntity
 {
+
+    private List<ProductAggregate> _products = new();
+
     public string Name { get; }
+    public IReadOnlyCollection<ProductAggregate> Products => _products.AsReadOnly();
+
+    private Category()
+        : base(new ID())
+    { }
 
     private Category(string name)
+        : base(new ID())
     {
-        this.Name = name;
+        Name = name;
     }
 
     public static Result<Category> Create(string name)
     {
-        return new Category(name);
-    }
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            return ProductErrors.CategoryNameIsNullOrEmpty;
+        }
 
-    public override IEnumerable<object> GetAtomicValues()
-    {
-        yield return this.Name;
+        return new Category(name);
     }
 }

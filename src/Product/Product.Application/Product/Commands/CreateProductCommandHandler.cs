@@ -37,8 +37,7 @@ internal sealed class CreateProductCommandHandler
         }
 
         var productResult = ProductAggregate.Create(
-            request.Name, 
-            request.Price,
+            request.Name,
             dimensionInfoResult.Value,
             request.Description);
 
