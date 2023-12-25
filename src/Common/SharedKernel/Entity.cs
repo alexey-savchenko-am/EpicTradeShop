@@ -5,11 +5,11 @@ public abstract class Entity<TKey>
     : IEquatable<Entity<TKey>>
     where TKey: IComparable
 {
-    public ID Id { get; }
+    public ID Id { get; private set; }
 
     public Entity(ID id)
     {
-        this.Id = id;
+        Id = id;
     }
 
     public bool Equals(Entity<TKey>? other)

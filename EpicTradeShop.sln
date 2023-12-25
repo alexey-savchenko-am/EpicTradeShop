@@ -29,9 +29,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stock", "Stock", "{A0F1738B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.Domain", "src\Stock\Stock.Domain\Stock.Domain.csproj", "{A839B129-7425-4CCF-806A-FDD1E34F725F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.Application", "src\Stock\Stock.Application\Stock.Application.csproj", "{26C87F93-8B7A-486D-96BA-B307ADDB7EF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.Application", "src\Stock\Stock.Application\Stock.Application.csproj", "{26C87F93-8B7A-486D-96BA-B307ADDB7EF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "src\Common\Presentation\Presentation.csproj", "{24A27F33-B115-45F5-B51D-020E1BB94B24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "src\Common\Presentation\Presentation.csproj", "{24A27F33-B115-45F5-B51D-020E1BB94B24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{824D49A1-294B-4BBC-BA1E-A202B88C7593}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

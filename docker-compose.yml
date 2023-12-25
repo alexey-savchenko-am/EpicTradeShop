@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  product-service:
+    container_name: product-service
+    image: ${DOCKER_REGISTRY-}productservice
+    build:
+      context: .
+      dockerfile: src/Product/Product.Api/Dockerfile
+    environment:
+        - ASPNETCORE_URLS=http://+:80;
+    ports:
+        - "8093:80"
+    depends_on:
+      - "sqlserver"
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: V#8L!pQs9o$R
+      ACCEPT_EULA: Y
+    ports:
+      - "1433:1433"
+    volumes:
+      - db:/var/lib/mssql/data 
+volumes:
+  db:
+    driver: local

@@ -7,12 +7,12 @@ using Serilog;
 
 namespace Presentation;
 
-public abstract class Server
+public abstract class WebServer
 {
 
     protected WebApplicationBuilder Builder { get; }
 
-    protected Server(string[] args, string serverName)
+    protected WebServer(string[] args, string serverName)
     {
 
         Log.Logger = new LoggerConfiguration()
@@ -21,7 +21,7 @@ public abstract class Server
 
         Log.Information($"Web Server '{serverName}' is starting up {DateTime.UtcNow}.");
 
-        Builder = WebApplication.CreateBuilder();
+        Builder = WebApplication.CreateBuilder(args);
 
         Builder.Host.UseSerilog((hostBuilderContext, loggerConfiguration) =>
         {
