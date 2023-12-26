@@ -16,7 +16,7 @@ internal class DatabaseOptionsSetup
     }
     public void Configure(DatabaseOptions options)
     {
-        var connectionString = _configuration.GetConnectionString("WarehouseDb");
+        var connectionString = _configuration.GetConnectionString("ProductDb");
         if(connectionString is not null)
         {
             options.ConnectionString = connectionString;

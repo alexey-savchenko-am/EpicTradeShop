@@ -1,16 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Persistence;
 using Product.Domain.Entities.ProductAggregate;
 
 namespace Product.Infrastructure.Data.Config;
 
 internal class CategoryConfiguration
-    : IEntityTypeConfiguration<Category>
+    : BaseEntityConfiguration<Category>
 {
-    public void Configure(EntityTypeBuilder<Category> builder)
+    public override void Configure(EntityTypeBuilder<Category> builder)
     {
-        builder.ToTable("ProductCategories");
-        builder.HasKey(category => category.Id);
+        base.Configure(builder);
+
+        builder.ToTable("Categories");
 
         builder.Property(category => category.Name).HasMaxLength(128);
 

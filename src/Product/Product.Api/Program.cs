@@ -1,16 +1,24 @@
 using Product.Application;
 using Product.Infrastructure;
 using Presentation;
+using Microsoft.EntityFrameworkCore;
 
-
-var server = new ProductServer(args);
-server.BuildAndRun();
+new ProductServer(args).BuildAndRun();
 
 public class ProductServer : WebServer
 {
     public ProductServer(string[] args)
         : base(args, "ProductService")
     {
+    }
+
+    protected override void OnStartingUp(IServiceProvider scopedServices)
+    {
+        var dbContext = scopedServices.GetRequiredService<DbContext>();
+        if(dbContext.Database.GetPendingMigrations().Any())
+        {
+            dbContext.Database.Migrate();
+        }
     }
 
     protected override void ConfigureSpecificServices(IServiceCollection services)

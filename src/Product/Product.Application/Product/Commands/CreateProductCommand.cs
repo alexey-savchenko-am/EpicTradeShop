@@ -8,10 +8,10 @@ public sealed record CreateProductCommand
     public CreateProductCommand(
         string name, 
         decimal price, 
-        decimal length,
-        decimal width,
-        decimal height,
-        decimal weight,
+        int length,
+        int width,
+        int height,
+        int weight,
         List<string> categories, 
         string description = "")
     {
@@ -28,9 +28,9 @@ public sealed record CreateProductCommand
     public string Name { get; }
     public string? Description { get; }
     public decimal Price { get; }
-    public decimal Length { get; }
-    public decimal Width { get; }
-    public decimal Height { get; }
-    public decimal Weight { get; }
+    public int Length { get; }
+    public int Width { get; }
+    public int Height { get; }
+    public int Weight { get; }
     public List<string> Categories { get; } = new();
 }

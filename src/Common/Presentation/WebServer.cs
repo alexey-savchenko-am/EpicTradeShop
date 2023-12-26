@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using MinimalApi.Endpoint.Extensions;
@@ -9,7 +10,6 @@ namespace Presentation;
 
 public abstract class WebServer
 {
-
     protected WebApplicationBuilder Builder { get; }
 
     protected WebServer(string[] args, string serverName)
@@ -68,12 +68,19 @@ public abstract class WebServer
         app.MapEndpoints();
     }
 
+    protected virtual void OnStartingUp(IServiceProvider scopedServices)
+    {}
+
     public void BuildAndRun()
     {
         try
         {
             var app = Builder.Build();
             Configure(app);
+
+            using var scope = app.Services.CreateScope(); 
+            OnStartingUp(scope.ServiceProvider);
+
             app.Run();
         }
         catch (Exception ex)

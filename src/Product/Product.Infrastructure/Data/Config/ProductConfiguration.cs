@@ -1,19 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Persistence;
 using Product.Domain.Entities.ProductAggregate;
 
 namespace Product.Infrastructure.Data.Config;
 
 internal class ProductConfiguration
-    : IEntityTypeConfiguration<ProductAggregate>
+    : BaseEntityConfiguration<ProductAggregate>
 {
-    public void Configure(EntityTypeBuilder<ProductAggregate> builder)
+    public override void Configure(EntityTypeBuilder<ProductAggregate> builder)
     {
+        base.Configure(builder);
+
         builder.ToTable("Products");
-        builder.HasKey(product => product.Id);
 
         builder
             .Property(product => product.Name)
+            .HasColumnName("ProductName")
             .HasMaxLength(100)
             .IsRequired();
 
@@ -40,21 +43,26 @@ internal class ProductConfiguration
         {
             dimensions
                 .Property(dimemsion => dimemsion.Width)
+                .HasColumnName("Width")
                 .IsRequired();
             dimensions
                 .Property(dimemsion => dimemsion.Height)
+                .HasColumnName("Height")
                 .IsRequired();
             dimensions
                 .Property(dimemsion => dimemsion.Length)
+                .HasColumnName("Length")
                 .IsRequired();
             dimensions
                 .Property(dimemsion => dimemsion.Weight)
+                .HasColumnName("Weight")
                 .IsRequired();
         });
 
         builder
             .HasMany(product => product.Categories)
             .WithMany(category => category.Products)
-            .UsingEntity(join => join.ToTable("ProductCategories"));
+            .UsingEntity(join => 
+                join.ToTable("ProductCategories"));
     }
 }
