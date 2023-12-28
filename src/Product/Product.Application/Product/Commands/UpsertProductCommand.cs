@@ -1,13 +1,15 @@
 ﻿using AppCommon.Cqrs;
+using Product.Domain.Entities.ProductAggregate;
 
 namespace Product.Application.Product.Commands;
 
-public sealed record CreateProductCommand 
-    : ICommand<Guid>
+public sealed record UpsertProductCommand 
+    : ICommand<ProductAggregate.ID>
 {
-    public CreateProductCommand(
+    public UpsertProductCommand(
+        ProductAggregate.ID? productId,
         string name, 
-        decimal price, 
+        decimal? price, 
         int length,
         int width,
         int height,
@@ -15,6 +17,7 @@ public sealed record CreateProductCommand
         List<string> categories, 
         string description = "")
     {
+        ProductId = productId;
         Name = name;
         Price = price;
         Length = length;
@@ -25,9 +28,10 @@ public sealed record CreateProductCommand
         Categories = categories;
     }
 
+    public ProductAggregate.ID? ProductId { get; }
     public string Name { get; }
     public string? Description { get; }
-    public decimal Price { get; }
+    public decimal? Price { get; }
     public int Length { get; }
     public int Width { get; }
     public int Height { get; }

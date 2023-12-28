@@ -1,4 +1,5 @@
-﻿using SharedKernel;
+﻿using Product.Domain.DomainEvents;
+using SharedKernel;
 using SharedKernel.Output;
 using SharedKernel.ValueObjects;
 
@@ -36,7 +37,9 @@ public class ProductAggregate
         DimensionsInfo dimensions,
         string? description = null)
 	{
-		return new ProductAggregate(name, dimensions, description);
+		var product = new ProductAggregate(name, dimensions, description);
+        RaiseDomainEvent(new ProductCreatedDomainEvent(product.Id));
+        return product;
 	}
 
 	public Result AddCategories(IEnumerable<string> categories)
@@ -79,6 +82,7 @@ public class ProductAggregate
         }
 
         Status = newStatus;
+        RaiseDomainEvent(new ProductStatusChangedDomainEvent(Id, newStatus));
         return Result.Success();
     }
 
