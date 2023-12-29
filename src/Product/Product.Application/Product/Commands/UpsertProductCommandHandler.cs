@@ -66,6 +66,8 @@ internal sealed class UpsertProductCommandHandler
 
         SetProductFields(productResult.Value, request);
 
+        await _productRepository.AddAsync(productResult.Value);
+
         return productResult.Value.Id;
     }
 

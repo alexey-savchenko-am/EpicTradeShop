@@ -1,6 +1,5 @@
-﻿namespace Product.Api.ProductEndpoints
+﻿namespace Product.Api.ProductEndpoints;
+
+public class Approve
 {
-    public class Approve
-    {
-    }
 }

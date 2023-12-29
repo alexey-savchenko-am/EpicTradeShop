@@ -13,7 +13,7 @@ public class Category
     public IReadOnlyCollection<ProductAggregate> Products => _products.AsReadOnly();
 
     private Category()
-        : base(new ID())
+        : base(new ID(Guid.NewGuid()))
     { }
 
     private Category(string name)

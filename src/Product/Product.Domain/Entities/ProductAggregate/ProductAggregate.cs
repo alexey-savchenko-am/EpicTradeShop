@@ -19,7 +19,7 @@ public class ProductAggregate
 	public IReadOnlyCollection<Category> Categories => _categories.AsReadOnly();
 
     private ProductAggregate()
-        : base(new ID())
+        : base(new ID(Guid.NewGuid()))
     {}
 
 	private ProductAggregate(string name, DimensionsInfo dimensions, string? description)
@@ -38,7 +38,7 @@ public class ProductAggregate
         string? description = null)
 	{
 		var product = new ProductAggregate(name, dimensions, description);
-        RaiseDomainEvent(new ProductCreatedDomainEvent(product.Id));
+        product.RaiseDomainEvent(new ProductCreatedDomainEvent(product.Id));
         return product;
 	}
 

@@ -6,7 +6,7 @@ public sealed class Result<TValue>
     private readonly TValue? _value;
     public TValue Value => this.IsSuccess
         ? this._value!
-        : throw new InvalidOperationException("The value of the failure result can not be accessed");
+        : default(TValue);//throw new InvalidOperationException("The value of the failure result can not be accessed");
 
     private Result(TValue? value, bool isSuccess, Error error)
         : base(isSuccess, error)

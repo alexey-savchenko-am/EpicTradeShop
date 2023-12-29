@@ -14,6 +14,7 @@ public abstract class Repository<TAggregateRoot>
     public Repository(DbContext dbContext)
     {
         DbContext = dbContext;
+        Set = dbContext.Set<TAggregateRoot>();
     }
 
     public async Task AddAsync(TAggregateRoot aggregate, CancellationToken ct = default)
