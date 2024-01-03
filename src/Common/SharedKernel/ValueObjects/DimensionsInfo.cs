@@ -27,7 +27,9 @@ public class DimensionsInfo : ValueObject
 
     public decimal Volume => Length * Width * Height;
 
-    public DimensionsInfo(int length, int width, int height, int weight)
+    private DimensionsInfo() { }
+
+    private DimensionsInfo(int length, int width, int height, int weight)
     {
         Length = length;
         Width = width;

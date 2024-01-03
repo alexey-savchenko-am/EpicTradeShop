@@ -44,9 +44,13 @@ namespace Product.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ProductName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    Price = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: true),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProductName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    ProductDescription = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: false),
+                    Brand = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Model = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: false),
+                    ProductPrice = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: true),
+                    ProductPriceCurrency = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: true),
                     StockQuantity = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
                     Length = table.Column<int>(type: "int", nullable: false),
                     Width = table.Column<int>(type: "int", nullable: false),
@@ -57,6 +61,44 @@ namespace Product.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "LaptopProducts",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ProcessorBrand = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProcessorModel = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: false),
+                    ProcessorFrequencyGgc = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
+                    ProcessorCoreCount = table.Column<int>(type: "int", nullable: false),
+                    ProcessorThreadCount = table.Column<int>(type: "int", nullable: false),
+                    GraphicsControllerType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GraphicsBrand = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GraphicsModel = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: false),
+                    VideoMemoryVolumeMb = table.Column<int>(type: "int", nullable: false),
+                    ScreenDiagonalInch = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
+                    ScreenWidthPx = table.Column<int>(type: "int", nullable: false),
+                    ScreenHeightPx = table.Column<int>(type: "int", nullable: false),
+                    RefreshRateGc = table.Column<int>(type: "int", nullable: false),
+                    ViewingAngleDeg = table.Column<int>(type: "int", nullable: false),
+                    RAMType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RAMVolumeGb = table.Column<int>(type: "int", nullable: false),
+                    RAMFrequencyMgc = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
+                    RAMIsUpgradable = table.Column<bool>(type: "bit", nullable: false),
+                    StorageType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StorageVolumeGb = table.Column<int>(type: "int", nullable: false),
+                    StorageIsUpgradeable = table.Column<bool>(type: "bit", nullable: false, defaultValue: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LaptopProducts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_LaptopProducts_Products_Id",
+                        column: x => x.Id,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -92,6 +134,9 @@ namespace Product.Infrastructure.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "LaptopProducts");
+
             migrationBuilder.DropTable(
                 name: "OutboxMessages");
 

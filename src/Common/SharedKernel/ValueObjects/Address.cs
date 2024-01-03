@@ -11,6 +11,8 @@ public sealed class Address
     public string PostalCode { get; }
     public string Country { get; }
 
+    private Address() { }
+
     private Address(string street, string city, string state, string postalCode, string country)
     {
         Street = street;

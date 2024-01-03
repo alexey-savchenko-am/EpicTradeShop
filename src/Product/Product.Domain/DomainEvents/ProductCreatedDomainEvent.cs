@@ -3,5 +3,5 @@ using SharedKernel;
 
 namespace Product.Domain.DomainEvents;
 
-public sealed record ProductCreatedDomainEvent(ProductAggregate.ID productId)
+public sealed record ProductCreatedDomainEvent(Entities.ProductAggregate.BaseProduct.ID productId)
     : IDomainEvent;

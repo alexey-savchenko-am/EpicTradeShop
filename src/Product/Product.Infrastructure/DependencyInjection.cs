@@ -3,8 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Persistence;
+using Persistence.BackgroundJobs;
+using Persistence.Interceptors;
 using Product.Application.Abstract;
+using Product.Domain.Entities.ProductAggregate;
 using Product.Infrastructure.Data.Repositories;
+using Quartz;
 
 namespace Product.Infrastructure;
 
@@ -15,10 +19,13 @@ public static class DependencyInjection
         var assembly = typeof(DependencyInjection).Assembly;
 
         services.ConfigureOptions<DatabaseOptionsSetup>();
+        services.AddSingleton<ConvertDomainEventsToOutboxMessagesInterceptor>();
 
         services.AddDbContext<DbContext, ProductDbContext>((provider, builder) =>
         {
             var options = provider.GetService<IOptions<DatabaseOptions>>()!.Value;
+            var eventsToOutboxMessagesInterceptor = 
+                provider.GetRequiredService<ConvertDomainEventsToOutboxMessagesInterceptor>();
 
             builder.UseSqlServer(options.ConnectionString, actions =>
             {
@@ -26,12 +33,25 @@ public static class DependencyInjection
                 actions.CommandTimeout(options.MaxRetryCount);
             });
 
+            builder.AddInterceptors(eventsToOutboxMessagesInterceptor);
             builder.EnableDetailedErrors(options.EnableDetailedErrors);
             builder.EnableSensitiveDataLogging(options.EnableSensitiveDataLogging);
         });
 
+        services.AddQuartz(configure =>
+        {
+            var jobKey = new JobKey(nameof(ProcessOutboxMessagesJob));
+
+            configure.AddJob<ProcessOutboxMessagesJob>(jobKey)
+                .AddTrigger(trigger => 
+                    trigger.ForJob(jobKey).WithSimpleSchedule(schedule => 
+                        schedule.WithIntervalInSeconds(10).RepeatForever()));
+        });
+
+        services.AddQuartzHostedService();
+
         services.AddScoped<IUnitOfWork, UnitOfWork>();
-        services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<IProductRepository<LaptopProduct>, LaptopProductRepository>();
 
         return services;
     }

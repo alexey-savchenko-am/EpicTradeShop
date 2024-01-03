@@ -4,7 +4,7 @@ using SharedKernel;
 
 namespace Persistence;
 
-public abstract class BaseEntityConfiguration<TEntity>
+public abstract class EntityWithPrimaryKeyConfiguration<TEntity>
     : IEntityTypeConfiguration<TEntity>
     where TEntity: GuidKeyEntity
 {

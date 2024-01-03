@@ -4,5 +4,5 @@ using SharedKernel;
 namespace Product.Domain.DomainEvents;
 
 public sealed record ProductStatusChangedDomainEvent(
-    ProductAggregate.ID productId, 
+    Entities.ProductAggregate.BaseProduct.ID productId, 
     ProductStatus newStatus) : IDomainEvent;

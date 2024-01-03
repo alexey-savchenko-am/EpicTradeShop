@@ -1,0 +1,276 @@
+2024-01-03 15:55:03.205 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-03 15:55:03.249 +03:00 [INF] Quartz Scheduler created
+2024-01-03 15:55:03.253 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-03 15:55:03.255 +03:00 [INF] RAMJobStore initialized.
+2024-01-03 15:55:03.258 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-03 15:55:03.260 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-03 15:55:03.262 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-03 15:55:03.279 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-03 15:55:03.283 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-03 15:55:03.663 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-03 15:55:03.668 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-03 15:55:03.670 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 15:55:03.672 +03:00 [INF] Hosting environment: Development
+2024-01-03 15:55:03.675 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-03 15:55:03.675 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-03 15:55:11.190 +03:00 [ERR] An error occurred instantiating job to be executed. job= 'DEFAULT.ProcessOutboxMessagesJob, message=Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.'
+Quartz.SchedulerException: Problem instantiating type 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob: Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.'
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method7(Closure, IServiceProvider, Object[])
+   at Quartz.Simpl.JobActivatorCache.CreateInstance(IServiceProvider serviceProvider, Type jobType)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.CreateJob(TriggerFiredBundle bundle, IServiceProvider serviceProvider)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken)
+   --- End of inner exception stack trace --- [See nested exception: System.InvalidOperationException: Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method7(Closure, IServiceProvider, Object[])
+   at Quartz.Simpl.JobActivatorCache.CreateInstance(IServiceProvider serviceProvider, Type jobType)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.CreateJob(TriggerFiredBundle bundle, IServiceProvider serviceProvider)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken)]
+2024-01-03 15:55:11.234 +03:00 [INF] All triggers of Job DEFAULT.ProcessOutboxMessagesJob set to ERROR state.
+2024-01-03 16:08:33.877 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-03 16:08:33.902 +03:00 [INF] Quartz Scheduler created
+2024-01-03 16:08:33.906 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-03 16:08:33.908 +03:00 [INF] RAMJobStore initialized.
+2024-01-03 16:08:33.909 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-03 16:08:33.911 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-03 16:08:33.912 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-03 16:08:33.922 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-03 16:08:33.927 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-03 16:08:34.175 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-03 16:08:34.179 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-03 16:08:34.180 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 16:08:34.182 +03:00 [INF] Hosting environment: Development
+2024-01-03 16:08:34.183 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-03 16:08:34.184 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-03 16:08:36.608 +03:00 [ERR] An error occurred instantiating job to be executed. job= 'DEFAULT.ProcessOutboxMessagesJob, message=Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.'
+Quartz.SchedulerException: Problem instantiating type 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob: Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.'
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method7(Closure, IServiceProvider, Object[])
+   at Quartz.Simpl.JobActivatorCache.CreateInstance(IServiceProvider serviceProvider, Type jobType)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.CreateJob(TriggerFiredBundle bundle, IServiceProvider serviceProvider)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken)
+   --- End of inner exception stack trace --- [See nested exception: System.InvalidOperationException: Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method7(Closure, IServiceProvider, Object[])
+   at Quartz.Simpl.JobActivatorCache.CreateInstance(IServiceProvider serviceProvider, Type jobType)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.CreateJob(TriggerFiredBundle bundle, IServiceProvider serviceProvider)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken)]
+2024-01-03 16:08:36.634 +03:00 [INF] All triggers of Job DEFAULT.ProcessOutboxMessagesJob set to ERROR state.
+2024-01-03 16:15:45.802 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-03 16:15:45.824 +03:00 [INF] Quartz Scheduler created
+2024-01-03 16:15:45.828 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-03 16:15:45.830 +03:00 [INF] RAMJobStore initialized.
+2024-01-03 16:15:45.831 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-03 16:15:45.832 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-03 16:15:45.834 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-03 16:15:45.845 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-03 16:15:45.848 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-03 16:15:46.113 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-03 16:15:46.117 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-03 16:15:46.119 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 16:15:46.121 +03:00 [INF] Hosting environment: Development
+2024-01-03 16:15:46.122 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-03 16:15:46.122 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-03 16:15:46.507 +03:00 [ERR] An error occurred instantiating job to be executed. job= 'DEFAULT.ProcessOutboxMessagesJob, message=Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.'
+Quartz.SchedulerException: Problem instantiating type 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob: Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.'
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method7(Closure, IServiceProvider, Object[])
+   at Quartz.Simpl.JobActivatorCache.CreateInstance(IServiceProvider serviceProvider, Type jobType)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.CreateJob(TriggerFiredBundle bundle, IServiceProvider serviceProvider)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken)
+   --- End of inner exception stack trace --- [See nested exception: System.InvalidOperationException: Unable to resolve service for type 'Persistence.DbContextWithOutboxMessages' while attempting to activate 'Persistence.BackgroundJobs.ProcessOutboxMessagesJob'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method7(Closure, IServiceProvider, Object[])
+   at Quartz.Simpl.JobActivatorCache.CreateInstance(IServiceProvider serviceProvider, Type jobType)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.CreateJob(TriggerFiredBundle bundle, IServiceProvider serviceProvider)
+   at Quartz.Simpl.MicrosoftDependencyInjectionJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken)]
+2024-01-03 16:15:46.616 +03:00 [INF] All triggers of Job DEFAULT.ProcessOutboxMessagesJob set to ERROR state.
+2024-01-03 18:34:28.616 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 15:34:28.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 18:40:34.868 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 15:40:34.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 18:41:35.667 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 15:41:35.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 18:47:36.261 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 15:47:36.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 18:55:23.737 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 15:55:23.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 19:09:40.379 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 16:09:40.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 19:13:34.024 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 16:13:34.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 19:16:42.494 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 16:16:42.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 19:19:48.683 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 16:19:48.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 19:24:24.658 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 16:24:24.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 19:27:02.942 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 16:27:02.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 19:27:44.970 +03:00 [FTL] When starting the web server, an exception occurred 03.01.2024 16:27:44.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Presentation.WebServer.BuildAndRun() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 83
+2024-01-03 20:06:58.082 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-03 20:07:01.761 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-03 20:07:01.765 +03:00 [INF] Quartz Scheduler created
+2024-01-03 20:07:01.768 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-03 20:07:01.770 +03:00 [INF] RAMJobStore initialized.
+2024-01-03 20:07:01.772 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-03 20:07:01.773 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-03 20:07:01.774 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-03 20:07:01.829 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-03 20:07:01.836 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-03 20:07:02.141 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-03 20:07:02.144 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-03 20:07:02.145 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-03 20:07:02.147 +03:00 [INF] Hosting environment: Development
+2024-01-03 20:07:02.148 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-03 20:07:02.149 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-03 20:07:03.746 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-03 20:07:23.492 +03:00 [ERR] HTTP POST /api/products/laptop responded 500 in 7725.8834 ms
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances is not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances is not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-03 20:07:23.522 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances is not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances is not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)

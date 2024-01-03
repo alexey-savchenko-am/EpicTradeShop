@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <Folder Include="BackgroundJobs\" />
+    <Folder Include="Data\Entities\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 

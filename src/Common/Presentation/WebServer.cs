@@ -66,6 +66,11 @@ public abstract class WebServer
         app.UseSerilogRequestLogging();
 
         app.MapEndpoints();
+
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
     }
 
     protected virtual void OnStartingUp(IServiceProvider scopedServices)

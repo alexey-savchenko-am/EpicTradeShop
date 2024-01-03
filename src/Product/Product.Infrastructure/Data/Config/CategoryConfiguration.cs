@@ -6,7 +6,7 @@ using Product.Domain.Entities.ProductAggregate;
 namespace Product.Infrastructure.Data.Config;
 
 internal class CategoryConfiguration
-    : BaseEntityConfiguration<Category>
+    : EntityWithPrimaryKeyConfiguration<Category>
 {
     public override void Configure(EntityTypeBuilder<Category> builder)
     {

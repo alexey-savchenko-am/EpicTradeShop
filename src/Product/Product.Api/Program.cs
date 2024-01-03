@@ -2,6 +2,8 @@ using Product.Application;
 using Product.Infrastructure;
 using Presentation;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using System.Security.Policy;
 
 new ProductServer(args).BuildAndRun();
 
@@ -25,7 +27,10 @@ public class ProductServer : WebServer
     {
         services
             .AddApplication()
-            .AddInfrastructure();
+            .AddInfrastructure()
+            .AddPresentation(
+                Assembly.GetExecutingAssembly(), 
+                typeof(Product.Application.DependencyInjection).Assembly);
     }
 }
 

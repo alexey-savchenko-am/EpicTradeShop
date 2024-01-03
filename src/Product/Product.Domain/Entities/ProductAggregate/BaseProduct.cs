@@ -5,39 +5,46 @@ using SharedKernel.ValueObjects;
 
 namespace Product.Domain.Entities.ProductAggregate;
 
-public class ProductAggregate
+public class BaseProduct
     : AggregateRoot
 {
 	private List<Category> _categories = new();
 
-    public string Name { get; private set; }
-	public string? Description { get; private set; }
-	public decimal? Price { get; private set; }
+    public ProductType Type { get; }
+    public ProductDetails ProductDetails { get; private set; }
+    public BrandModel BrandModel { get; private set; }
+    public Money? Price { get; private set; }
 	public int StockQuantity { get; private set; }
     public DimensionsInfo Dimensions { get; private set; }
     public ProductStatus Status { get; private set; }
 	public IReadOnlyCollection<Category> Categories => _categories.AsReadOnly();
 
-    private ProductAggregate()
+    protected BaseProduct()
         : base(new ID(Guid.NewGuid()))
     {}
 
-	private ProductAggregate(string name, DimensionsInfo dimensions, string? description)
-		: base(new ID())
+	protected BaseProduct(
+        ProductType type, 
+        ProductDetails productDetails, 
+        BrandModel brandModel, 
+        DimensionsInfo dimensions)
+		: base(new ID(Guid.NewGuid()))
 	{
-        Name = name;
+        Type = type;
+        ProductDetails = productDetails;
+        BrandModel = brandModel;
         Dimensions = dimensions;
 		StockQuantity = 0;
-		Description = description;
 		Status = ProductStatus.Draft;
 	}
 
-	public static Result<ProductAggregate> Create(
-        string name, 
-        DimensionsInfo dimensions,
-        string? description = null)
+	public static Result<BaseProduct> Create(
+        ProductType type,
+        ProductDetails productDetails,
+        BrandModel brandModel,
+        DimensionsInfo dimensions)
 	{
-		var product = new ProductAggregate(name, dimensions, description);
+		var product = new BaseProduct(type, productDetails, brandModel, dimensions);
         product.RaiseDomainEvent(new ProductCreatedDomainEvent(product.Id));
         return product;
 	}
@@ -51,22 +58,25 @@ public class ProductAggregate
         return Result.Success();
     }
 
-    public Result Edit(string? productName = null, string? description = null, DimensionsInfo? dimentions = null)
+    public Result Edit(
+        BrandModel? brandModel, ProductDetails? productDetails, DimensionsInfo? dimentions)
     {
-        if(Status > ProductStatus.Draft) 
+        if (Status > ProductStatus.Draft) 
         {
             return ProductErrors.CanNotEditNonDraftProduct;
         }
 
-        if(productName is not null)
+        if (productDetails is not null && productDetails != ProductDetails)
         {
-            Name = productName;
+            ProductDetails = productDetails;
         }
-        if(description is not null) 
-        { 
-            Description = description;
+
+        if (brandModel is not null && brandModel != BrandModel)
+        {
+            BrandModel = brandModel;
         }
-        if(dimentions is not null)
+
+        if (dimentions is not null && dimentions != Dimensions)
         {
             Dimensions = dimentions;
         }
@@ -103,11 +113,11 @@ public class ProductAggregate
         return Result.Success();
     }
 
-    public Result SetProductPrice(decimal newPrice)
+    public Result SetPrice(Money newPrice)
     {
-        if (newPrice <= 0)
+        if(newPrice is null)
         {
-            return ProductErrors.ProductPriceIsLessThanOrEqualToZero;
+            return new Error("Product.SetPrice", "Can not set empty price.");
         }
 
         Price = newPrice;

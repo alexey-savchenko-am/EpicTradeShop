@@ -5,29 +5,19 @@ using Product.Domain.Entities.ProductAggregate;
 
 namespace Product.Infrastructure.Data.Repositories;
 
-internal class ProductRepository
-    : Repository<ProductAggregate>, IProductRepository
+internal class LaptopProductRepository
+    : Repository<LaptopProduct>, IProductRepository<LaptopProduct>
 {
-	public ProductRepository(ProductDbContext productDbContext)
+	public LaptopProductRepository(ProductDbContext productDbContext)
 		: base(productDbContext)
 	{}
 
 
-    public Task<ProductAggregate?> GetProductWithFieldsAsync(ProductAggregate.ID productId)
+    public Task<LaptopProduct?> GetProductWithFieldsAsync(LaptopProduct.ID productId)
     {
         return Set
             .Where(product => product.Id == productId)
             .Include(product => product.Categories)
             .SingleOrDefaultAsync();
-    }
-
-    public Task<bool> ExistsAsync(string productName)
-    {
-        return Set.AnyAsync(product => product.Name == productName);
-    }
-
-    public Task<bool> ExistsAsync(ProductAggregate.ID productId)
-    {
-        return Set.AnyAsync(product => product.Id == productId);
     }
 }
