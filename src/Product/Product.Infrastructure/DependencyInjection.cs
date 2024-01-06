@@ -20,6 +20,7 @@ public static class DependencyInjection
 
         services.ConfigureOptions<DatabaseOptionsSetup>();
         services.AddSingleton<ConvertDomainEventsToOutboxMessagesInterceptor>();
+        services.AddSingleton<IDbConnectionFactory, DbConnectionFactory>();
 
         services.AddDbContext<DbContext, ProductDbContext>((provider, builder) =>
         {

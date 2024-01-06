@@ -1,7 +1,5 @@
-﻿using AutoMapper;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Product.Application.Product.Commands;
 using Product.Application.Product.Commands.Create;
 using Product.Application.Requests;
 using Swashbuckle.AspNetCore.Annotations;
@@ -33,6 +31,6 @@ public class CreateController
             return BadRequest(result);
         }
 
-        return Ok(result);
+        return Created(new Uri($"api/products/{result.Value.Key}"), result);
     }
 }
