@@ -1,6 +1,6 @@
 ﻿namespace SharedKernel.Output;
 
-public sealed class Error
+public class Error
 {
     public string Code { get; }
 	public string Message { get; }

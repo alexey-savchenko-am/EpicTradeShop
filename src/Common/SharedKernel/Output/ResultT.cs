@@ -1,6 +1,6 @@
 ﻿namespace SharedKernel.Output;
 
-public sealed class Result<TValue>
+public class Result<TValue>
     : Result
 {
     private readonly TValue? _value;

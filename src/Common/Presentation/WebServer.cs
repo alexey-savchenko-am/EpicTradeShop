@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using MinimalApi.Endpoint.Extensions;
+using Presentation.Middlewares;
 using Serilog;
 
 namespace Presentation;
@@ -64,6 +65,8 @@ public abstract class WebServer
         app.UseAuthorization();
 
         app.UseSerilogRequestLogging();
+
+        app.UseMiddleware<ValidationExceptionHandlingMiddleware>();
 
         app.MapEndpoints();
 
