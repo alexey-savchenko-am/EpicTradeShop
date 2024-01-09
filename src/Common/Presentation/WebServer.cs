@@ -1,11 +1,20 @@
 ﻿
+using Asp.Versioning;
+using Asp.Versioning.Builder;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer.ValueGeneration.Internal;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using MinimalApi.Endpoint;
 using MinimalApi.Endpoint.Extensions;
+using Presentation.Endpoints;
 using Presentation.Middlewares;
+using Presentation.Swagger;
 using Serilog;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Presentation;
 
@@ -35,28 +44,55 @@ public abstract class WebServer
     protected void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
-        services.AddEndpoints();
+        services.AddVersionedEndpoints();
         services.AddEndpointsApiExplorer();
-        services.AddSwaggerGen(c =>
+
+        services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+        services.AddSwaggerGen(options =>
         {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
+            options.OperationFilter<SwaggerDefaultValues>();
         });
+
+
+        services.AddApiVersioning(options =>
+        {
+            options.DefaultApiVersion = new ApiVersion(1);
+            options.ReportApiVersions = true;
+            options.AssumeDefaultVersionWhenUnspecified = true;
+            options.ApiVersionReader = new UrlSegmentApiVersionReader();
+        }).AddApiExplorer(options =>
+        {
+            options.GroupNameFormat = "'v'V";
+            options.SubstituteApiVersionInUrl = true;
+        });
+
 
         ConfigureSpecificServices(services);
     }
 
     protected abstract void ConfigureSpecificServices(IServiceCollection services);
 
+    protected abstract ApiVersionSet ConfigureApiVersions(WebApplication app);
+
     protected virtual void Configure(WebApplication app)
     {
-        app.UseRouting();
+        app.MapVersionedEndpoints(ConfigureApiVersions(app));
 
         app.UseSwagger();
 
-        app.UseSwaggerUI(c =>
+        app.UseSwaggerUI(options =>
         {
-            c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API V1");
+            var descriptions = app.DescribeApiVersions();
+
+            foreach (var description in descriptions)
+            {
+                var url = $"/swagger/{description.GroupName}/swagger.json";
+                var name = description.GroupName.ToUpperInvariant();
+                options.SwaggerEndpoint(url, name);
+            }
         });
+
+        app.UseRouting();
 
         app.UseHttpsRedirection();
 
@@ -67,13 +103,12 @@ public abstract class WebServer
         app.UseSerilogRequestLogging();
 
         app.UseMiddleware<ValidationExceptionHandlingMiddleware>();
-
-        app.MapEndpoints();
-
+        
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();
         });
+
     }
 
     protected virtual void OnStartingUp(IServiceProvider scopedServices)

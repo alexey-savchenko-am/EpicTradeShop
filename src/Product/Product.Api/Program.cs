@@ -3,7 +3,8 @@ using Product.Infrastructure;
 using Presentation;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using System.Security.Policy;
+using Asp.Versioning.Builder;
+using Asp.Versioning;
 
 new ProductServer(args).BuildAndRun();
 
@@ -31,6 +32,15 @@ public class ProductServer : WebServer
             .AddPresentation(
                 Assembly.GetExecutingAssembly(), 
                 typeof(Product.Application.DependencyInjection).Assembly);
+    }
+
+    protected override ApiVersionSet ConfigureApiVersions(WebApplication app)
+    {
+        return app.NewApiVersionSet()
+            .HasApiVersion(new ApiVersion(1))
+            .HasApiVersion(new ApiVersion(2))
+            .ReportApiVersions()
+            .Build();
     }
 }
 
