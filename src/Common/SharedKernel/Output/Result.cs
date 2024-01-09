@@ -1,9 +1,15 @@
-﻿namespace SharedKernel.Output;
+﻿using System.Text.Json.Serialization;
+
+namespace SharedKernel.Output;
 
 public class Result
 {
     public bool IsSuccess { get; }
+
+    [JsonIgnore]
     public bool IsFailure => !IsSuccess;
+
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public Error Error { get; }
     
     protected Result(bool isSuccess, Error error)

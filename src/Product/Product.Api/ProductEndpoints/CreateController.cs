@@ -6,6 +6,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Product.Api.ProductEndpoints;
 
+[Tags("ProductEndpoint")]
 public class CreateController
     : Controller
 {

@@ -1,0 +1,191 @@
+2024-01-09 11:12:30.425 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 11:12:32.181 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 11:12:32.184 +03:00 [INF] Quartz Scheduler created
+2024-01-09 11:12:32.186 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 11:12:32.189 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 11:12:32.191 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 11:12:32.193 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 11:12:32.195 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 11:12:32.212 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 11:12:32.216 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 11:12:32.665 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 11:12:32.671 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 11:12:32.673 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 11:12:32.676 +03:00 [INF] Hosting environment: Development
+2024-01-09 11:12:32.677 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 11:12:32.686 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 11:12:35.266 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 11:14:22.510 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 11:14:23.368 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 11:14:23.371 +03:00 [INF] Quartz Scheduler created
+2024-01-09 11:14:23.373 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 11:14:23.374 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 11:14:23.376 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 11:14:23.378 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 11:14:23.379 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 11:14:23.391 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 11:14:23.394 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 11:14:23.686 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 11:14:23.688 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 11:14:23.691 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 11:14:23.693 +03:00 [INF] Hosting environment: Development
+2024-01-09 11:14:23.695 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 11:14:23.695 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 11:14:27.439 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 11:14:47.018 +03:00 [INF] HTTP GET /api/products/{productId} responded 200 in 284.3527 ms
+2024-01-09 11:21:36.865 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 11:21:38.088 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 11:21:38.091 +03:00 [INF] Quartz Scheduler created
+2024-01-09 11:21:38.093 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 11:21:38.095 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 11:21:38.098 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 11:21:38.100 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 11:21:38.102 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 11:21:38.124 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 11:21:38.128 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 11:21:38.501 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 11:21:38.504 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 11:21:38.507 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 11:21:38.509 +03:00 [INF] Hosting environment: Development
+2024-01-09 11:21:38.511 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 11:21:38.514 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 11:21:42.749 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 11:32:46.532 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 11:32:47.468 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 11:32:47.471 +03:00 [INF] Quartz Scheduler created
+2024-01-09 11:32:47.472 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 11:32:47.474 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 11:32:47.475 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 11:32:47.476 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 11:32:47.478 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 11:32:47.489 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 11:32:47.493 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 11:32:47.757 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 11:32:47.760 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 11:32:47.763 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 11:32:47.765 +03:00 [INF] Hosting environment: Development
+2024-01-09 11:32:47.766 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 11:32:47.767 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 11:32:52.923 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 11:35:18.546 +03:00 [INF] HTTP GET /api/products/{productId} responded 200 in 244.3744 ms
+2024-01-09 11:37:05.510 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 11:37:06.327 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 11:37:06.330 +03:00 [INF] Quartz Scheduler created
+2024-01-09 11:37:06.332 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 11:37:06.333 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 11:37:06.334 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 11:37:06.336 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 11:37:06.337 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 11:37:06.348 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 11:37:06.351 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 11:37:06.597 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 11:37:06.599 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 11:37:06.601 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 11:37:06.602 +03:00 [INF] Hosting environment: Development
+2024-01-09 11:37:06.604 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 11:37:06.605 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 11:37:11.641 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 11:38:23.926 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 11:38:24.753 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 11:38:24.756 +03:00 [INF] Quartz Scheduler created
+2024-01-09 11:38:24.757 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 11:38:24.759 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 11:38:24.760 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 11:38:24.761 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 11:38:24.763 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 11:38:24.775 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 11:38:24.779 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 11:38:25.044 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 11:38:25.048 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 11:38:25.050 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 11:38:25.052 +03:00 [INF] Hosting environment: Development
+2024-01-09 11:38:25.054 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 11:38:25.054 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 11:38:25.412 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 11:44:42.429 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 11:44:43.312 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 11:44:43.314 +03:00 [INF] Quartz Scheduler created
+2024-01-09 11:44:43.317 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 11:44:43.319 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 11:44:43.320 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 11:44:43.322 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 11:44:43.324 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 11:44:43.338 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 11:44:43.343 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 11:44:43.632 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 11:44:43.635 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 11:44:43.638 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 11:44:43.641 +03:00 [INF] Hosting environment: Development
+2024-01-09 11:44:43.642 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 11:44:43.644 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 11:44:48.678 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 12:12:33.449 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 12:12:34.492 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 12:12:34.494 +03:00 [INF] Quartz Scheduler created
+2024-01-09 12:12:34.498 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 12:12:34.500 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 12:12:34.501 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 12:12:34.503 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 12:12:34.505 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 12:12:34.518 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 12:12:34.522 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 12:12:34.855 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 12:12:34.863 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 12:12:34.867 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 12:12:34.870 +03:00 [INF] Hosting environment: Development
+2024-01-09 12:12:34.871 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 12:12:34.876 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 12:12:35.497 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 12:13:41.727 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 12:13:42.641 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 12:13:42.645 +03:00 [INF] Quartz Scheduler created
+2024-01-09 12:13:42.647 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 12:13:42.648 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 12:13:42.650 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 12:13:42.651 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 12:13:42.652 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 12:13:42.664 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 12:13:42.669 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 12:13:42.953 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 12:13:42.958 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 12:13:42.962 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 12:13:42.965 +03:00 [INF] Hosting environment: Development
+2024-01-09 12:13:42.968 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 12:13:42.968 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 12:13:48.034 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 12:14:55.298 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 12:14:56.082 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 12:14:56.085 +03:00 [INF] Quartz Scheduler created
+2024-01-09 12:14:56.087 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 12:14:56.090 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 12:14:56.094 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 12:14:56.097 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 12:14:56.100 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 12:14:56.113 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 12:14:56.116 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 12:14:56.396 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 12:14:56.399 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 12:14:56.401 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 12:14:56.403 +03:00 [INF] Hosting environment: Development
+2024-01-09 12:14:56.404 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 12:14:56.405 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 12:14:56.630 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 12:19:52.639 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-09 12:19:53.452 +03:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-09 12:19:53.454 +03:00 [INF] Quartz Scheduler created
+2024-01-09 12:19:53.456 +03:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-09 12:19:53.458 +03:00 [INF] RAMJobStore initialized.
+2024-01-09 12:19:53.459 +03:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-09 12:19:53.461 +03:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-09 12:19:53.462 +03:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-09 12:19:53.474 +03:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-09 12:19:53.477 +03:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-09 12:19:53.732 +03:00 [INF] Now listening on: https://localhost:8080
+2024-01-09 12:19:53.740 +03:00 [INF] Now listening on: http://localhost:44301
+2024-01-09 12:19:53.742 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-09 12:19:53.744 +03:00 [INF] Hosting environment: Development
+2024-01-09 12:19:53.746 +03:00 [INF] Content root path: D:\Projects\EpicTradeShop\src\Product\Product.Api
+2024-01-09 12:19:53.747 +03:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-09 12:19:54.309 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-09 12:20:12.969 +03:00 [INF] HTTP GET /api/products/{productId} responded 200 in 229.9422 ms
+2024-01-09 12:20:32.773 +03:00 [INF] HTTP GET /api/products responded 200 in 2612.4170 ms

@@ -1,6 +1,7 @@
 ﻿namespace Product.Application.Responses;
 
-public record ProductResponse
+public class ProductResponse
+    : BaseProductResponse
 {
     public ProductResponse(
         string id, 

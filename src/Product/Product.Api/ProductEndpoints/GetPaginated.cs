@@ -2,15 +2,19 @@
 using MinimalApi.Endpoint;
 using Product.Application.Product.Queries.GetAllPaginated;
 using Product.Application.Responses;
+using SharedKernel.Output;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Product.Api.ProductEndpoints;
 
-public class GetPaginatedProductsEndpoint
+
+[SwaggerTag("Product")]
+public class GetPaginated
     : IEndpoint<IResult, GetAllProductsPaginatedQuery>
 {
     private readonly ISender _sender;
 
-    public GetPaginatedProductsEndpoint(ISender sender)
+    public GetPaginated(ISender sender)
     {
         _sender = sender;
     }
@@ -18,13 +22,14 @@ public class GetPaginatedProductsEndpoint
     public void AddRoute(IEndpointRouteBuilder app)
     {
         app.MapGet("api/products",
-            async (int page, int itemsPerPage)
+        async (int page, int itemsPerPage)
                 => await HandleAsync(new GetAllProductsPaginatedQuery(page, itemsPerPage)))
-          .Produces<PaginatedResult<ProductResponse>>()
+          .Produces<Result<PagedResponse<ProductResponse>>>()
           .Produces(StatusCodes.Status204NoContent)
           .Produces(StatusCodes.Status200OK)
           .Produces(StatusCodes.Status400BadRequest)
-          .WithMetadata("Retrieve a list of all products stored in the database, divided into pages of a specified size.");
+          .WithMetadata("Retrieve a list of all products stored in the database, divided into pages of a specified size.")
+          .WithTags("ProductEndpoint");
     }
 
     public async Task<IResult> HandleAsync(GetAllProductsPaginatedQuery request)
@@ -33,14 +38,14 @@ public class GetPaginatedProductsEndpoint
 
         if(result.IsFailure)
         {
-            return Results.BadRequest(result.Error.Message);
+            return Results.BadRequest(result);
         }
 
-        if(result.Value.Items.Count == 0)
+        if(!result.Value.Items.Any())
         {
             return Results.NoContent();
         }
         
-        return Results.Ok(result.Value);
+        return Results.Ok(result);
     }
 }

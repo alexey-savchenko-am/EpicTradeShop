@@ -1,17 +1,21 @@
-﻿namespace SharedKernel.Output;
+﻿using System.Text.Json.Serialization;
+
+namespace SharedKernel.Output;
 
 public class Result<TValue>
     : Result
 {
     private readonly TValue? _value;
-    public TValue Value => this.IsSuccess
-        ? this._value!
+
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+    public TValue Value => IsSuccess
+        ? _value!
         : default(TValue);//throw new InvalidOperationException("The value of the failure result can not be accessed");
 
-    private Result(TValue? value, bool isSuccess, Error error)
+    protected Result(TValue? value, bool isSuccess, Error error)
         : base(isSuccess, error)
     {
-        this._value = value;
+        _value = value;
     }
 
     public static Result<TValue> Success(TValue value) => new(value!, true, Error.None);

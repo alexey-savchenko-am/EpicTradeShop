@@ -1,5 +1,4 @@
 ﻿using AppCommon.Cqrs;
-using Dapper;
 using Product.Application.Abstract;
 using Product.Application.Responses;
 using SharedKernel.Output;
@@ -7,56 +6,28 @@ using SharedKernel.Output;
 namespace Product.Application.Product.Queries.GetAllPaginated;
 
 public sealed class GetAllProductsPaginatedQueryHandler
-    : IQueryHandler<GetAllProductsPaginatedQuery, PaginatedResult<ProductResponse>>
+    : IQueryHandler<GetAllProductsPaginatedQuery, PagedResponse<ProductResponse>>
 {
-    private readonly IDbConnectionFactory _dbConnectionFactory;
+    private readonly IProductsQueryService _productsQueryHandler;
 
-    public GetAllProductsPaginatedQueryHandler(IDbConnectionFactory dbConnectionFactory)
+    public GetAllProductsPaginatedQueryHandler(IProductsQueryService productsQueryHandler)
     {
-        _dbConnectionFactory = dbConnectionFactory;
+        _productsQueryHandler = productsQueryHandler;
     }
 
-    public async Task<Result<PaginatedResult<ProductResponse>>> Handle(GetAllProductsPaginatedQuery request, CancellationToken cancellationToken)
+    public async Task<Result<PagedResponse<ProductResponse>>> Handle(GetAllProductsPaginatedQuery request, CancellationToken cancellationToken)
     {
         var skip = (request.Page - 1) * request.ProductsPerPage;
         var take = request.ProductsPerPage;
 
-        var productList = await GetProductListAsync(skip, take, cancellationToken);
+        var productsWithCount = await _productsQueryHandler.GetProductListAsync(skip, take, cancellationToken);
 
-        var productItems = new List<ProductResponse>(productList);
-
-        var result = new PaginatedResult<ProductResponse>(productItems!, request.Page, request.ProductsPerPage, 10);
+        var result = new PagedResponse<ProductResponse>(
+            productsWithCount.products.ToList(), 
+            request.Page, 
+            request.ProductsPerPage,
+            productsWithCount.totalCount / request.ProductsPerPage + 1);
 
         return result;
-    }
-
-    private async Task<IEnumerable<ProductResponse>> GetProductListAsync(int skip, int take, CancellationToken cancellationToken)
-    {
-        using var connection = _dbConnectionFactory.GetConnection();
-
-        var query = @"
-            select
-                p.Id
-                , p.Type
-                , p.Status
-                , p.StockQuantity
-                , p.ProductName as Name
-                , p.ProductDescription as Description
-                , p.Brand
-                , p.Model
-                , p.ProductPrice as Price
-                , p.Length
-                , p.Width
-                , p.Height
-                , p.Weight
-            from Products p
-            order by  p.Id
-            offset @skip rows
-            fetch next @take rows only;
-        ";
-
-        var products = await connection.QueryAsync<ProductResponse>(query, new {skip, take });
-
-        return products;
     }
 }

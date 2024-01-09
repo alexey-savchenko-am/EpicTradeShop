@@ -1,8 +1,9 @@
-﻿using Product.Domain.Entities.ProductAggregate;
+﻿using Product.Application.JsonConverters;
+using System.Text.Json.Serialization;
 
 namespace Product.Application.Responses;
 
-public sealed record LaptopProductResponse
+public sealed class LaptopProductResponse
     : ProductResponse
 {
     public LaptopProductResponse(

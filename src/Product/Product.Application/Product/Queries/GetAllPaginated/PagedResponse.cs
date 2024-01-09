@@ -1,9 +1,9 @@
 ﻿namespace Product.Application.Product.Queries.GetAllPaginated;
 
-public class PaginatedResult<TResponse>
+public class PagedResponse<TResponse>
     where TResponse : class
 {
-    public PaginatedResult(List<TResponse> items, int page, int itemsPerPage, int pageCount)
+    public PagedResponse(List<TResponse> items, int page, int itemsPerPage, int pageCount)
     {
         Items = items;
         Page = page;
