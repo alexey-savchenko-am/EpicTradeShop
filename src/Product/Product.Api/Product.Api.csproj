@@ -30,7 +30,9 @@
     </ItemGroup>
 	
     <ItemGroup>
+      <Folder Include="logs\" />
       <Folder Include="PresentationModels\" />
+      <Folder Include="wwwroot\images\" />
     </ItemGroup>
 
 </Project>

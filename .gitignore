@@ -24,6 +24,8 @@ bld/
 [Oo]bj/
 [Ll]og/
 **/obj/
+**/logs/
+**/wwwroot/images
 
 
 # Visual Studio 2015/2017 cache/options directory
