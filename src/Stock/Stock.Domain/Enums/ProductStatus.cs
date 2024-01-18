@@ -1,4 +1,4 @@
-﻿namespace Product.Domain.Entities.ProductAggregate;
+﻿namespace Stock.Domain.Enums;
 
 public enum ProductStatus
 {

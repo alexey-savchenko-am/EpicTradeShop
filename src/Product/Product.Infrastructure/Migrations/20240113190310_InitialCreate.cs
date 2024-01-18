@@ -52,10 +52,12 @@ namespace Product.Infrastructure.Migrations
                     ProductPrice = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: true),
                     ProductPriceCurrency = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: true),
                     StockQuantity = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
-                    Length = table.Column<int>(type: "int", nullable: false),
-                    Width = table.Column<int>(type: "int", nullable: false),
-                    Height = table.Column<int>(type: "int", nullable: false),
-                    Weight = table.Column<int>(type: "int", nullable: false),
+                    Length = table.Column<decimal>(type: "decimal(8,2)", precision: 8, scale: 2, nullable: false),
+                    Width = table.Column<decimal>(type: "decimal(8,2)", precision: 8, scale: 2, nullable: false),
+                    Height = table.Column<decimal>(type: "decimal(8,2)", precision: 8, scale: 2, nullable: false),
+                    Weight = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Material = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -68,6 +70,7 @@ namespace Product.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    OperatingSystem = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProcessorBrand = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProcessorModel = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: false),
                     ProcessorFrequencyGgc = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
@@ -88,7 +91,11 @@ namespace Product.Infrastructure.Migrations
                     RAMIsUpgradable = table.Column<bool>(type: "bit", nullable: false),
                     StorageType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StorageVolumeGb = table.Column<int>(type: "int", nullable: false),
-                    StorageIsUpgradeable = table.Column<bool>(type: "bit", nullable: false, defaultValue: false)
+                    StorageIsUpgradeable = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
+                    BatteryType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BatteryCellCount = table.Column<int>(type: "int", nullable: false),
+                    BatteryCapacityWh = table.Column<int>(type: "int", nullable: false),
+                    BatteryMaxWorktimeHrs = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -125,10 +132,36 @@ namespace Product.Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "ProductImages",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ProductId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Link = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Data = table.Column<byte[]>(type: "varbinary(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductImages", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProductImages_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_ProductCategories_ProductsId",
                 table: "ProductCategories",
                 column: "ProductsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductImages_ProductId",
+                table: "ProductImages",
+                column: "ProductId");
         }
 
         /// <inheritdoc />
@@ -142,6 +175,9 @@ namespace Product.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "ProductCategories");
+
+            migrationBuilder.DropTable(
+                name: "ProductImages");
 
             migrationBuilder.DropTable(
                 name: "Categories");

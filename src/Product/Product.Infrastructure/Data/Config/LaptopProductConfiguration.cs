@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Product.Domain.Entities.ProductAggregate;
+using Product.Domain.Entities.ProductAggregate.ConcreteProducts;
 
 namespace Product.Infrastructure.Data.Config;
 
@@ -11,6 +12,10 @@ internal class LaptopProductConfiguration
     {
         builder.ToTable("LaptopProducts");
         builder.HasBaseType<BaseProduct>();
+
+        builder.Property(product => product.OperatingSystem)
+            .HasConversion<string>()
+            .IsRequired();
 
         builder.OwnsOne(product => product.Display, display =>
         {
@@ -113,8 +118,8 @@ internal class LaptopProductConfiguration
                 .HasColumnName("RAMFrequencyMgc")
                 .HasPrecision(10, 2);
 
-            ram.Property(r => r.IsUpgradable)
-                .HasColumnName("RAMIsUpgradable");
+            ram.Property(r => r.IsUpgradeable)
+                .HasColumnName("RAMIsUpgradeable");
         });
 
         builder.OwnsOne(product => product.Storage, storage =>
@@ -134,5 +139,25 @@ internal class LaptopProductConfiguration
             .IsRequired();
         });
 
+
+        builder.OwnsOne(product => product.Battery, battery =>
+        {
+            battery.Property(b => b.BatteryType)
+                .HasColumnName("BatteryType")
+                .HasConversion<string>()
+                .IsRequired();
+
+            battery.Property(b => b.CellCount)
+                .HasColumnName("BatteryCellCount")
+               .IsRequired();
+
+            battery.Property(b => b.CapacityWh)
+               .HasColumnName("BatteryCapacityWh")
+               .IsRequired();
+
+            battery.Property(b => b.MaxWorktimeHrs)
+               .HasColumnName("BatteryMaxWorktimeHrs")
+               .IsRequired(false);
+        });
     }
 }

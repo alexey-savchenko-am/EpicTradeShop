@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Net;
+using System.Text.Json.Serialization;
 
 namespace SharedKernel.Output;
 
@@ -14,9 +15,8 @@ public class Error
     public Error? InnerError { get; }
 
 
-    private Error()
-    {
-    }
+    protected Error()
+    {}
 
     public Error(string code, string message)
 	{

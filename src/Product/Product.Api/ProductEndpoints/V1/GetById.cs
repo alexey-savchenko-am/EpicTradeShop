@@ -25,7 +25,7 @@ public class GetById
             async ([FromRoute] Guid productId)
                 => await HandleAsync(new GetProductByIdQuery(new BaseProduct.ID(productId))))
           .Produces<Result<ProductResponse>>()
-          .Produces(StatusCodes.Status204NoContent)
+          .Produces(StatusCodes.Status404NotFound)
           .Produces(StatusCodes.Status200OK)
           .Produces(StatusCodes.Status400BadRequest)
           .WithDescription("Gets product by its id.")
@@ -45,9 +45,9 @@ public class GetById
 
         if (result.Value is null)
         {
-            return Results.NoContent();
+            return Results.NotFound();
         }
 
-        return Results.Ok(result);
+        return Results.Ok(result.Value);
     }
 }

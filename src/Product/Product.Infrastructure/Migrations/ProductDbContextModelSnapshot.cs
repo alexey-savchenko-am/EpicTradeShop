@@ -70,6 +70,14 @@ namespace Product.Infrastructure.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Color")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Material")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -105,9 +113,41 @@ namespace Product.Infrastructure.Migrations
                     b.ToTable("Categories", (string)null);
                 });
 
-            modelBuilder.Entity("Product.Domain.Entities.ProductAggregate.LaptopProduct", b =>
+            modelBuilder.Entity("Product.Domain.Entities.ProductAggregate.ProductImage", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<byte[]>("Data")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductImages", (string)null);
+                });
+
+            modelBuilder.Entity("Product.Domain.Entities.ProductAggregate.ConcreteProducts.LaptopProduct", b =>
                 {
                     b.HasBaseType("Product.Domain.Entities.ProductAggregate.BaseProduct");
+
+                    b.Property<string>("OperatingSystem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("LaptopProducts", (string)null);
                 });
@@ -183,20 +223,23 @@ namespace Product.Infrastructure.Migrations
                             b1.Property<string>("BaseProductId")
                                 .HasColumnType("nvarchar(450)");
 
-                            b1.Property<int>("Height")
-                                .HasColumnType("int")
+                            b1.Property<decimal>("Height")
+                                .HasPrecision(8, 2)
+                                .HasColumnType("decimal(8,2)")
                                 .HasColumnName("Height");
 
-                            b1.Property<int>("Length")
-                                .HasColumnType("int")
+                            b1.Property<decimal>("Length")
+                                .HasPrecision(8, 2)
+                                .HasColumnType("decimal(8,2)")
                                 .HasColumnName("Length");
 
-                            b1.Property<int>("Weight")
-                                .HasColumnType("int")
+                            b1.Property<decimal>("Weight")
+                                .HasColumnType("decimal(18,2)")
                                 .HasColumnName("Weight");
 
-                            b1.Property<int>("Width")
-                                .HasColumnType("int")
+                            b1.Property<decimal>("Width")
+                                .HasPrecision(8, 2)
+                                .HasColumnType("decimal(8,2)")
                                 .HasColumnName("Width");
 
                             b1.HasKey("BaseProductId");
@@ -243,13 +286,54 @@ namespace Product.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Product.Domain.Entities.ProductAggregate.LaptopProduct", b =>
+            modelBuilder.Entity("Product.Domain.Entities.ProductAggregate.ProductImage", b =>
+                {
+                    b.HasOne("Product.Domain.Entities.ProductAggregate.BaseProduct", "Product")
+                        .WithMany("Images")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Product.Domain.Entities.ProductAggregate.ConcreteProducts.LaptopProduct", b =>
                 {
                     b.HasOne("Product.Domain.Entities.ProductAggregate.BaseProduct", null)
                         .WithOne()
-                        .HasForeignKey("Product.Domain.Entities.ProductAggregate.LaptopProduct", "Id")
+                        .HasForeignKey("Product.Domain.Entities.ProductAggregate.ConcreteProducts.LaptopProduct", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.OwnsOne("Product.Domain.Entities.Battery", "Battery", b1 =>
+                        {
+                            b1.Property<string>("LaptopProductId")
+                                .HasColumnType("nvarchar(450)");
+
+                            b1.Property<string>("BatteryType")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("BatteryType");
+
+                            b1.Property<int>("CapacityWh")
+                                .HasColumnType("int")
+                                .HasColumnName("BatteryCapacityWh");
+
+                            b1.Property<int>("CellCount")
+                                .HasColumnType("int")
+                                .HasColumnName("BatteryCellCount");
+
+                            b1.Property<int?>("MaxWorktimeHrs")
+                                .HasColumnType("int")
+                                .HasColumnName("BatteryMaxWorktimeHrs");
+
+                            b1.HasKey("LaptopProductId");
+
+                            b1.ToTable("LaptopProducts");
+
+                            b1.WithOwner()
+                                .HasForeignKey("LaptopProductId");
+                        });
 
                     b.OwnsOne("Product.Domain.Entities.Display", "Display", b1 =>
                         {
@@ -413,9 +497,9 @@ namespace Product.Infrastructure.Migrations
                                 .HasColumnType("decimal(10,2)")
                                 .HasColumnName("RAMFrequencyMgc");
 
-                            b1.Property<bool>("IsUpgradable")
+                            b1.Property<bool>("IsUpgradeable")
                                 .HasColumnType("bit")
-                                .HasColumnName("RAMIsUpgradable");
+                                .HasColumnName("RAMIsUpgradeable");
 
                             b1.Property<string>("Type")
                                 .IsRequired()
@@ -462,6 +546,9 @@ namespace Product.Infrastructure.Migrations
                                 .HasForeignKey("LaptopProductId");
                         });
 
+                    b.Navigation("Battery")
+                        .IsRequired();
+
                     b.Navigation("Display")
                         .IsRequired();
 
@@ -476,6 +563,11 @@ namespace Product.Infrastructure.Migrations
 
                     b.Navigation("Storage")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Product.Domain.Entities.ProductAggregate.BaseProduct", b =>
+                {
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }

@@ -13,10 +13,12 @@ public class ProductResponse
         string brand,
         string model,
         decimal? price,
-        int length,
-        int width,
-        int height,
-        int weight)
+        decimal length,
+        decimal width,
+        decimal height,
+        decimal weight,
+        string color,
+        string material)
     {
         Id = id;
         Type = type;
@@ -31,6 +33,8 @@ public class ProductResponse
         Width = width;
         Height = height;
         Weight = weight;
+        Color = color;
+        Material = material;
     }
 
     public string Id { get; }
@@ -42,10 +46,12 @@ public class ProductResponse
     public string Brand { get; }
     public string Model { get; }
     public decimal? Price { get; }
-    public int Length { get; }
-    public int Width { get; }
-    public int Height { get; }
-    public int Weight { get; }
+    public decimal Length { get; }
+    public decimal Width { get; }
+    public decimal Height { get; }
+    public decimal Weight { get; }
+    public string Color { get; }
+    public string Material { get; }
 
     public string DetailsUrl => $"/api/products/{Id}";
 

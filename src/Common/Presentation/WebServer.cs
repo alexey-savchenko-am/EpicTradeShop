@@ -2,14 +2,9 @@
 using Asp.Versioning;
 using Asp.Versioning.Builder;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.SqlServer.ValueGeneration.Internal;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
-using MinimalApi.Endpoint;
-using MinimalApi.Endpoint.Extensions;
 using Presentation.Endpoints;
 using Presentation.Middlewares;
 using Presentation.Swagger;
@@ -35,7 +30,9 @@ public abstract class WebServer
 
         Builder.Host.UseSerilog((hostBuilderContext, loggerConfiguration) =>
         {
-            loggerConfiguration.WriteTo.Console().ReadFrom.Configuration(hostBuilderContext.Configuration);
+            loggerConfiguration
+                .WriteTo.Console()
+                .ReadFrom.Configuration(hostBuilderContext.Configuration);
         });
 
         ConfigureServices(Builder.Services);
@@ -77,7 +74,7 @@ public abstract class WebServer
     protected virtual void Configure(WebApplication app)
     {
         app.MapVersionedEndpoints(ConfigureApiVersions(app));
-
+        
         app.UseSwagger();
 
         app.UseSwaggerUI(options =>
@@ -96,6 +93,8 @@ public abstract class WebServer
 
         app.UseHttpsRedirection();
 
+        app.UseStaticFiles();
+
         app.UseAuthentication();
 
         app.UseAuthorization();
@@ -111,10 +110,9 @@ public abstract class WebServer
 
     }
 
-    protected virtual void OnStartingUp(IServiceProvider scopedServices)
-    {}
+    protected abstract Task OnStartingUpAsync(IServiceProvider scopedServices, bool isDevelopment);
 
-    public void BuildAndRun()
+    public async Task BuildAndRunAsync()
     {
         try
         {
@@ -122,7 +120,7 @@ public abstract class WebServer
             Configure(app);
 
             using var scope = app.Services.CreateScope(); 
-            OnStartingUp(scope.ServiceProvider);
+            await OnStartingUpAsync(scope.ServiceProvider, app.Environment.IsDevelopment()).ConfigureAwait(false);
 
             app.Run();
         }

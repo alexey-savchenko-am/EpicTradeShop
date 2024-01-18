@@ -3,7 +3,7 @@ using AppCommon.Persistence;
 using Product.Application.Abstract;
 using Product.Application.Requests;
 using Product.Domain.Entities;
-using Product.Domain.Entities.ProductAggregate;
+using Product.Domain.Entities.ProductAggregate.ConcreteProducts;
 using SharedKernel.Output;
 using SharedKernel.ValueObjects;
 
@@ -46,14 +46,14 @@ public class CreateLaptopProductCommandHandler
         }
 
         var screenResolutionResult = ScreenResolution.Create(
-            request.Display.widthPixel, 
-            request.Display.heightPixel);
+            request.Display.WidthPixel, 
+            request.Display.HeightPixel);
 
         var displayResult = Display.Create(
-            request.Display.diagonalInch,
+            request.Display.DiagonalInch,
             screenResolutionResult,
-            request.Display.refreshRateGc,
-            request.Display.viewingAngleDeg);
+            request.Display.RefreshRateGc,
+            request.Display.ViewingAngleDeg);
 
         var ramResult = Ram.Create(
             request.Ram.Type, 
@@ -73,15 +73,25 @@ public class CreateLaptopProductCommandHandler
             storageDeviceResult = StorageDevice.CreateSsd(request.Storage.VolumeGb, request.Storage.IsUpgradeable);
         }
 
+        var battery = Battery.Create(
+            request.Battery.Type,
+            request.Battery.CellCount,
+            request.Battery.CapacityWh,
+            request.Battery.MaxWorktimeHrs);
+
         var laptopProductResult = LaptopProduct.Create(
           productEntities.ProductDetails,
           productEntities.BrandModel,
           productEntities.DimensionsInfo,
+          productEntities.Color,
+          productEntities.Material,
+          request.OperatingSystem,
           processorResult,
           graphicsResult,
           displayResult,
           ramResult,
-          storageDeviceResult);
+          storageDeviceResult,
+          battery);
 
         return laptopProductResult;
     }

@@ -6,7 +6,7 @@ using Persistence;
 using Persistence.BackgroundJobs;
 using Persistence.Interceptors;
 using Product.Application.Abstract;
-using Product.Domain.Entities.ProductAggregate;
+using Product.Domain.Entities.ProductAggregate.ConcreteProducts;
 using Product.Infrastructure.Data.QueryServices;
 using Product.Infrastructure.Data.Repositories;
 using Quartz;
@@ -53,7 +53,8 @@ public static class DependencyInjection
         services.AddQuartzHostedService();
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
-        services.AddScoped<IProductRepository<LaptopProduct>, LaptopProductRepository>();
+        services.AddScoped<IDatabaseInitializer, ProductDbContextSeed>();
+        services.AddScoped(typeof(IProductRepository<>), typeof(ProductRepository<>));
         services.AddScoped<IProductsQueryService, ProductsQueryService>();
 
         return services;

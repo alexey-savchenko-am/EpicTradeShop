@@ -27,6 +27,16 @@ internal class ProductConfiguration
             .HasConversion<string>()
             .IsRequired();
 
+        builder
+            .Property(product => product.Color)
+            .HasConversion<string>()
+            .IsRequired();
+
+
+        builder
+            .Property(product => product.Material)
+            .HasConversion<string>()
+            .IsRequired();
 
         builder.OwnsOne(product => product.ProductDetails, details =>
         {
@@ -75,14 +85,17 @@ internal class ProductConfiguration
             dimensions
                 .Property(dimemsion => dimemsion.Width)
                 .HasColumnName("Width")
+                .HasPrecision(8, 2)
                 .IsRequired();
             dimensions
                 .Property(dimemsion => dimemsion.Height)
                 .HasColumnName("Height")
+                .HasPrecision(8, 2)
                 .IsRequired();
             dimensions
                 .Property(dimemsion => dimemsion.Length)
                 .HasColumnName("Length")
+                .HasPrecision(8, 2)
                 .IsRequired();
             dimensions
                 .Property(dimemsion => dimemsion.Weight)
@@ -95,5 +108,11 @@ internal class ProductConfiguration
             .WithMany(category => category.Products)
             .UsingEntity(join => 
                 join.ToTable("ProductCategories"));
+
+        builder
+            .HasMany(product => product.Images)
+            .WithOne(image => image.Product)
+            .HasForeignKey(image => image.ProductId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

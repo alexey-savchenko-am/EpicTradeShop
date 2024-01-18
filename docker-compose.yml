@@ -1,18 +1,14 @@
 version: '3.4'
 
 services:
-  product-service:
-    container_name: product-service
-    image: ${DOCKER_REGISTRY-}productservice
+  product.api:
+    image: ${DOCKER_REGISTRY-}productapi
     build:
       context: .
       dockerfile: src/Product/Product.Api/Dockerfile
-    environment:
-        - ASPNETCORE_URLS=http://+:80;
-    ports:
-        - "8093:80"
-    depends_on:
-      - "sqlserver"
+    networks:
+      specific-network: 
+        ipv4_address: 172.21.0.2
   sqlserver:
     image: mcr.microsoft.com/mssql/server
     environment:
@@ -20,8 +16,11 @@ services:
       ACCEPT_EULA: Y
     ports:
       - "1433:1433"
-    volumes:
-      - db:/var/lib/mssql/data 
-volumes:
-  db:
-    driver: local
+    networks:
+      specific-network: 
+        ipv4_address: 172.21.0.3
+networks:
+  specific-network:
+   ipam:
+      config:
+        - subnet: 172.21.0.0/16

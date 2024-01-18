@@ -1,6 +1,4 @@
 ﻿using SharedKernel;
-using System.Reflection.Emit;
-using System;
 
 namespace Stock.Domain.Entities;
 

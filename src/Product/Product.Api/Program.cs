@@ -5,8 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using Asp.Versioning.Builder;
 using Asp.Versioning;
+using AppCommon.Persistence;
 
-new ProductServer(args).BuildAndRun();
+await new ProductServer(args).BuildAndRunAsync();
 
 public class ProductServer : WebServer
 {
@@ -15,12 +16,19 @@ public class ProductServer : WebServer
     {
     }
 
-    protected override void OnStartingUp(IServiceProvider scopedServices)
+    protected override async Task OnStartingUpAsync(IServiceProvider scopedServices, bool isDevelopment)
     {
-        var dbContext = scopedServices.GetRequiredService<DbContext>();
+        /*var dbContext = scopedServices.GetRequiredService<DbContext>();
         if(dbContext.Database.GetPendingMigrations().Any())
         {
             dbContext.Database.Migrate();
+        }
+        */
+
+        if (isDevelopment)
+        {
+            var databaseInitializer = scopedServices.GetRequiredService<IDatabaseInitializer>();
+            await databaseInitializer.InitializeWithTestDataAsync(recreateDatabase: true);
         }
     }
 

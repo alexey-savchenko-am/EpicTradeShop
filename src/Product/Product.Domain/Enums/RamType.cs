@@ -1,5 +1,8 @@
-﻿namespace Product.Domain.Enums;
+﻿using System.Text.Json.Serialization;
 
+namespace Product.Domain.Enums;
+
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum RamType
 {
     DDR2,

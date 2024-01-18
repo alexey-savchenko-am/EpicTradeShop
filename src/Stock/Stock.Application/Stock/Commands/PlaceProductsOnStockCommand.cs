@@ -1,6 +1,5 @@
 ﻿using AppCommon.Cqrs;
 using SharedKernel;
-using Stock.Domain.Entities.StockItem;
 
 namespace Stock.Application.Stock.Commands;
 

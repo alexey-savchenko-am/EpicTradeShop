@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Product.Domain.Entities.ProductAggregate
+namespace Product.Domain.Entities.ProductAggregate.ConcreteProducts
 {
     internal class MobilePhoneProduct
     {

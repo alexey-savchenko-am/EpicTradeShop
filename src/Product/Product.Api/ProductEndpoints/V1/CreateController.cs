@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Product.Application.Product.Commands.Create;
 using Product.Application.Requests;
+using Product.Domain.Entities.ProductAggregate;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Product.Api.ProductEndpoints.V1;
@@ -36,6 +37,11 @@ public class CreateController
             return BadRequest(result);
         }
 
-        return Created(new Uri($"api/products/{result.Value.Key}"), result);
+        return Created(ProductUri(result.Value), result);
     }
+
+    [NonAction]
+    private Uri ProductUri(BaseProduct.ID productId)
+        => new($"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/api/v1/products/{productId.Key}");
+
 }

@@ -1,4 +1,4 @@
-﻿using Product.Domain.Entities.ProductAggregate;
+﻿using Product.Domain.Enums;
 using SharedKernel;
 
 namespace Product.Domain.DomainEvents;

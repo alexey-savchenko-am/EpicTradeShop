@@ -1,0 +1,849 @@
+2024-01-18 10:27:36.969 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 10:27:37.160 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 10:27:38.708 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 10:27:40.620 +00:00 [INF] Creating seed Products...
+2024-01-18 10:27:40.788 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"4ae944b2-6e71-4beb-a34b-17c2ade2d598"}}
+2024-01-18 10:27:40.789 +00:00 [INF] {"OperatingSystem":"Windows","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i3 1115G4"},"FrequencyGgc":3.0,"CoreCount":2,"ThreadCount":4},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"UHD Graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":256,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":51,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Digma Pro Sprint M DN15P3-8CXW02","Description":"Digma Pro Sprint M DN15P3-8CXW02"},"BrandModel":{"Brand":"Digma","Model":"Sprint M"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":23.9,"Width":35.8,"Height":1.6,"Weight":1.82,"Volume":1368.992},"Color":"Black","Material":"MetalPlastic","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"6dd0be8f-3d71-4fc5-8ef6-d1404c92bea8"}}
+2024-01-18 10:27:40.790 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":1,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"12ab5a59-f15f-44d9-b0aa-403489068c9d"}}
+2024-01-18 10:27:41.316 +00:00 [INF] Seed products are persisted successfully.
+2024-01-18 10:27:41.371 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-18 10:27:41.372 +00:00 [INF] Quartz Scheduler created
+2024-01-18 10:27:41.375 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-18 10:27:41.377 +00:00 [INF] RAMJobStore initialized.
+2024-01-18 10:27:41.379 +00:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-18 10:27:41.380 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-18 10:27:41.382 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-18 10:27:41.395 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-18 10:27:41.398 +00:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-18 10:27:41.530 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-18 10:27:41.532 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-18 10:27:41.535 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 10:27:41.537 +00:00 [INF] Hosting environment: Development
+2024-01-18 10:27:41.537 +00:00 [INF] Content root path: /app
+2024-01-18 10:27:41.565 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-18 10:27:44.840 +00:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-18 10:29:15.509 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 10:29:15.664 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 10:29:16.793 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 10:29:18.463 +00:00 [INF] Creating seed Products...
+2024-01-18 10:29:18.654 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"ebf50b7a-c7dd-487a-bcb9-0509092d9f68"}}
+2024-01-18 10:29:18.656 +00:00 [INF] {"OperatingSystem":"Windows","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i3 1115G4"},"FrequencyGgc":3.0,"CoreCount":2,"ThreadCount":4},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"UHD Graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":256,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":51,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Digma Pro Sprint M DN15P3-8CXW02","Description":"Digma Pro Sprint M DN15P3-8CXW02"},"BrandModel":{"Brand":"Digma","Model":"Sprint M"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":23.9,"Width":35.8,"Height":1.6,"Weight":1.82,"Volume":1368.992},"Color":"Black","Material":"MetalPlastic","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"69096e78-411e-41c4-90a9-6b1369ba6379"}}
+2024-01-18 10:29:18.657 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":1,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"b5cc5271-a16b-49a6-aee2-795fccdb68d5"}}
+2024-01-18 10:29:19.239 +00:00 [INF] Seed products are persisted successfully.
+2024-01-18 10:29:19.300 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-18 10:29:19.301 +00:00 [INF] Quartz Scheduler created
+2024-01-18 10:29:19.304 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-18 10:29:19.306 +00:00 [INF] RAMJobStore initialized.
+2024-01-18 10:29:19.307 +00:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-18 10:29:19.309 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-18 10:29:19.311 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-18 10:29:19.326 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-18 10:29:19.330 +00:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-18 10:29:19.499 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-18 10:29:19.500 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-18 10:29:19.502 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 10:29:19.505 +00:00 [INF] Hosting environment: Development
+2024-01-18 10:29:19.505 +00:00 [INF] Content root path: /app
+2024-01-18 10:29:19.514 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-18 10:29:24.110 +00:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-18 13:30:37.455 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 13:30:37.612 +03:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 13:30:59.631 +03:00 [FTL] When starting the web server, an exception occurred 18.01.2024 10:30:59.
+Microsoft.EntityFrameworkCore.Storage.RetryLimitExceededException: The maximum number of retries (1) was exceeded while executing database operations with 'SqlServerRetryingExecutionStrategy'. See the inner exception for the most recent failure.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.)
+ ---> System.ComponentModel.Win32Exception (10060): Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext _, TState s)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass28_0`2.<Execute>b__0(DbContext context, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10060,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureDeleted()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureDeleted()
+   at Product.Infrastructure.ProductDbContextSeed.InitializeWithTestDataAsync(Boolean recreateDatabase) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\ProductDbContextSeed.cs:line 31
+   at ProductServer.OnStartingUpAsync(IServiceProvider scopedServices, Boolean isDevelopment) in D:\Projects\EpicTradeShop\src\Product\Product.Api\Program.cs:line 31
+   at Presentation.WebServer.BuildAndRunAsync() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 123
+2024-01-18 10:33:04.798 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 10:33:04.943 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 10:35:30.836 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 10:35:30.971 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 10:35:53.041 +00:00 [FTL] When starting the web server, an exception occurred 01/18/2024 10:35:53.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server: Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext _, TState s)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass28_0`2.<Execute>b__0(DbContext context, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureDeleted()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureDeleted()
+   at Product.Infrastructure.ProductDbContextSeed.InitializeWithTestDataAsync(Boolean recreateDatabase) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\ProductDbContextSeed.cs:line 31
+   at ProductServer.OnStartingUpAsync(IServiceProvider scopedServices, Boolean isDevelopment) in D:\Projects\EpicTradeShop\src\Product\Product.Api\Program.cs:line 31
+   at Presentation.WebServer.BuildAndRunAsync() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 123
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2024-01-18 10:36:38.809 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 10:36:39.284 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 10:37:01.088 +00:00 [FTL] When starting the web server, an exception occurred 01/18/2024 10:37:01.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server: Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.<>c__DisplayClass18_0.<Exists>b__0(DateTime giveUp)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext _, TState s)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass28_0`2.<Execute>b__0(DbContext context, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementation[TState,TResult](Func`3 operation, Func`3 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists(Boolean retryOnNotExists)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureDeleted()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureDeleted()
+   at Product.Infrastructure.ProductDbContextSeed.InitializeWithTestDataAsync(Boolean recreateDatabase) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\ProductDbContextSeed.cs:line 31
+   at ProductServer.OnStartingUpAsync(IServiceProvider scopedServices, Boolean isDevelopment) in D:\Projects\EpicTradeShop\src\Product\Product.Api\Program.cs:line 31
+   at Presentation.WebServer.BuildAndRunAsync() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 123
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2024-01-18 10:47:19.407 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 10:47:19.538 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 10:47:20.829 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 10:47:22.679 +00:00 [INF] Creating seed Products...
+2024-01-18 10:47:22.845 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"a4948535-2b44-485d-ba74-7d21eb410700"}}
+2024-01-18 10:47:22.847 +00:00 [INF] {"OperatingSystem":"Windows","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i3 1115G4"},"FrequencyGgc":3.0,"CoreCount":2,"ThreadCount":4},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"UHD Graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":256,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":51,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Digma Pro Sprint M DN15P3-8CXW02","Description":"Digma Pro Sprint M DN15P3-8CXW02"},"BrandModel":{"Brand":"Digma","Model":"Sprint M"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":23.9,"Width":35.8,"Height":1.6,"Weight":1.82,"Volume":1368.992},"Color":"Black","Material":"MetalPlastic","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"19dc55e6-4cf4-4b55-be8b-f6f8738a1704"}}
+2024-01-18 10:47:22.847 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":1,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"34828641-8ce6-4d45-b0dd-125dac48184a"}}
+2024-01-18 10:47:23.375 +00:00 [INF] Seed products are persisted successfully.
+2024-01-18 10:47:23.426 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-18 10:47:23.427 +00:00 [INF] Quartz Scheduler created
+2024-01-18 10:47:23.429 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-18 10:47:23.431 +00:00 [INF] RAMJobStore initialized.
+2024-01-18 10:47:23.433 +00:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-18 10:47:23.434 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-18 10:47:23.436 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-18 10:47:23.448 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-18 10:47:23.452 +00:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-18 10:47:23.591 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-18 10:47:23.592 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-18 10:47:23.594 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 10:47:23.595 +00:00 [INF] Hosting environment: Development
+2024-01-18 10:47:23.596 +00:00 [INF] Content root path: /app
+2024-01-18 10:47:23.623 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-18 10:47:27.377 +00:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-18 10:47:36.334 +00:00 [INF] HTTP GET /api/v1/products responded 200 in 361.3467 ms
+2024-01-18 10:48:00.948 +00:00 [ERR] HTTP GET /api/v1/products/19dc55e6-4cf4-4b55-be8b-f6f8738a1704 responded 500 in 356.0180 ms
+System.InvalidOperationException: A parameterless default constructor or one matching signature (System.String Id, System.String Type, System.String Status, System.Int32 StockQuantity, System.String Name, System.String Description, System.String Brand, System.String Model, System.Decimal Price, System.Decimal Length, System.Decimal Width, System.Decimal Height, System.Decimal Weight, System.String Color, System.String Material, System.String OperatingSystem, System.String ProcessorBrand, System.String ProcessorModel, System.Decimal ProcessorFrequencyGgc, System.Int32 ProcessorCoreCount, System.Int32 ProcessorThreadCount, System.String GraphicsControllerType, System.String GraphicsBrand, System.String GraphicsModel, System.Int32 VideoMemoryVolumeMb, System.Decimal ScreenDiagonalInch, System.Int32 ScreenWidthPx, System.Int32 ScreenHeightPx, System.Int32 RefreshRateGc, System.Int32 ViewingAngleDeg, System.String RamType, System.Int32 RamVolumeGb, System.Decimal RamFrequencyMgc, System.Boolean RamIsUpgradeable, System.String StorageType, System.Int32 StorageVolumeGb, System.Boolean StorageIsUpgradeable, System.String BatteryType, System.Int32 BatteryCellCount, System.Int32 BatteryCapacityWh, System.Int32 BatteryMaxWorktimeHrs) is required for Product.Application.Responses.LaptopProductResponse materialization
+   at Dapper.SqlMapper.GenerateDeserializerFromMap(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing, ILGenerator il) in /_/Dapper/SqlMapper.cs:line 3473
+   at Dapper.SqlMapper.GetTypeDeserializerImpl(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3304
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 151
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 50
+   at Dapper.SqlMapper.GetTypeDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3258
+   at Dapper.SqlMapper.GetDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 1945
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command)
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetLaptopProductByIdAsync(IDbConnection connection, ID productId) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 139
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetProductByIdAsync(ID productId, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 96
+   at Product.Application.Product.Queries.GetById.GetProductByIdQueryHandler.Handle(GetProductByIdQuery request, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Application\Product\Queries\GetById\GetProductByIdQueryHandler.cs:line 20
+   at AppCommon.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Common\AppCommon\Behaviors\ValidationBehavior.cs:line 38
+   at Product.Api.ProductEndpoints.V1.GetById.HandleAsync(GetProductByIdQuery request) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 39
+   at Product.Api.ProductEndpoints.V1.GetById.<ConfigureRoute>b__2_0(Guid productId) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-18 10:48:00.992 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: A parameterless default constructor or one matching signature (System.String Id, System.String Type, System.String Status, System.Int32 StockQuantity, System.String Name, System.String Description, System.String Brand, System.String Model, System.Decimal Price, System.Decimal Length, System.Decimal Width, System.Decimal Height, System.Decimal Weight, System.String Color, System.String Material, System.String OperatingSystem, System.String ProcessorBrand, System.String ProcessorModel, System.Decimal ProcessorFrequencyGgc, System.Int32 ProcessorCoreCount, System.Int32 ProcessorThreadCount, System.String GraphicsControllerType, System.String GraphicsBrand, System.String GraphicsModel, System.Int32 VideoMemoryVolumeMb, System.Decimal ScreenDiagonalInch, System.Int32 ScreenWidthPx, System.Int32 ScreenHeightPx, System.Int32 RefreshRateGc, System.Int32 ViewingAngleDeg, System.String RamType, System.Int32 RamVolumeGb, System.Decimal RamFrequencyMgc, System.Boolean RamIsUpgradeable, System.String StorageType, System.Int32 StorageVolumeGb, System.Boolean StorageIsUpgradeable, System.String BatteryType, System.Int32 BatteryCellCount, System.Int32 BatteryCapacityWh, System.Int32 BatteryMaxWorktimeHrs) is required for Product.Application.Responses.LaptopProductResponse materialization
+   at Dapper.SqlMapper.GenerateDeserializerFromMap(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing, ILGenerator il) in /_/Dapper/SqlMapper.cs:line 3473
+   at Dapper.SqlMapper.GetTypeDeserializerImpl(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3304
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 151
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 50
+   at Dapper.SqlMapper.GetTypeDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3258
+   at Dapper.SqlMapper.GetDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 1945
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command)
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetLaptopProductByIdAsync(IDbConnection connection, ID productId) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 139
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetProductByIdAsync(ID productId, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 96
+   at Product.Application.Product.Queries.GetById.GetProductByIdQueryHandler.Handle(GetProductByIdQuery request, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Application\Product\Queries\GetById\GetProductByIdQueryHandler.cs:line 20
+   at AppCommon.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Common\AppCommon\Behaviors\ValidationBehavior.cs:line 38
+   at Product.Api.ProductEndpoints.V1.GetById.HandleAsync(GetProductByIdQuery request) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 39
+   at Product.Api.ProductEndpoints.V1.GetById.<ConfigureRoute>b__2_0(Guid productId) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-18 10:48:31.395 +00:00 [INF] HTTP POST /api/v1/products/19dc55e6-4cf4-4b55-be8b-f6f8738a1704/images/pupper.jpg responded 201 in 293.8439 ms
+2024-01-18 10:48:56.812 +00:00 [INF] HTTP GET /api/v1/products/19dc55e6-4cf4-4b55-be8b-f6f8738a1704/images/pupper.jpg responded 200 in 41.8913 ms
+2024-01-18 10:49:04.431 +00:00 [INF] HTTP GET /api/v1/products/19dc55e6-4cf4-4b55-be8b-f6f8738a1704/images/pupper.jp responded 404 in 48.9870 ms
+2024-01-18 10:49:17.953 +00:00 [INF] HTTP GET /api/v1/products/19dc55e6-4cf4-4b55-be8b-f6f8738a1704/images/pupper responded 404 in 61.8868 ms
+2024-01-18 11:06:54.595 +00:00 [INF] HTTP GET /api/v1/products/19dc55e6-4cf4-4b55-be8b-f6f8738a1704/images/pupper.jpg responded 200 in 23.3479 ms
+2024-01-18 11:07:25.332 +00:00 [INF] HTTP GET /api/v1/products/19dc55e6-4cf4-4b55-be8b-f6f8738a1704/images/pupper.jpg responded 200 in 86.7635 ms
+2024-01-18 11:12:39.154 +00:00 [INF] HTTP POST /api/v1/products/laptop responded 400 in 102.0394 ms
+2024-01-18 11:13:34.004 +00:00 [INF] HTTP POST /api/v1/products/laptop responded 400 in 6.7324 ms
+2024-01-18 11:15:19.279 +00:00 [INF] HTTP POST /api/v1/products/laptop responded 400 in 2.5919 ms
+2024-01-18 11:15:30.111 +00:00 [INF] HTTP POST /api/v1/products/laptop responded 400 in 2.6362 ms
+2024-01-18 11:16:42.822 +00:00 [INF] HTTP POST /api/v1/products/laptop responded 400 in 2.0046 ms
+2024-01-18 11:18:09.357 +00:00 [INF] HTTP POST /api/v1/products/laptop responded 400 in 1.1735 ms
+2024-01-18 11:23:29.401 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 11:23:29.682 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 11:23:31.854 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 11:23:34.390 +00:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='1']
+EXEC sp_rename N'[LaptopProducts].[RAMIsUpgradable]', N'RAMIsUpgradeable', N'COLUMN';
+2024-01-18 11:23:34.558 +00:00 [FTL] When starting the web server, an exception occurred 01/18/2024 11:23:34.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.CheckThrowSNIException()
+   at Microsoft.Data.SqlClient.SqlCommand.CheckThrowSNIException()
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__208_1(IAsyncResult result)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IEnumerable`1 migrationCommands, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Product.Infrastructure.ProductDbContextSeed.InitializeWithTestDataAsync(Boolean recreateDatabase) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\ProductDbContextSeed.cs:line 33
+   at ProductServer.OnStartingUpAsync(IServiceProvider scopedServices, Boolean isDevelopment) in D:\Projects\EpicTradeShop\src\Product\Product.Api\Program.cs:line 31
+   at Presentation.WebServer.BuildAndRunAsync() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 123
+ClientConnectionId:ef24ac4b-4cd5-4673-9f52-46903dad0693
+Error Number:-2,State:0,Class:11
+2024-01-18 11:29:47.111 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 11:29:47.245 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 11:29:48.407 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 11:29:50.117 +00:00 [INF] Creating seed Products...
+2024-01-18 11:29:50.299 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"d218a985-66ad-4291-8b9c-8ca744407ef7"}}
+2024-01-18 11:29:50.300 +00:00 [INF] {"OperatingSystem":"Windows","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i3 1115G4"},"FrequencyGgc":3.0,"CoreCount":2,"ThreadCount":4},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"UHD Graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":256,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":51,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Digma Pro Sprint M DN15P3-8CXW02","Description":"Digma Pro Sprint M DN15P3-8CXW02"},"BrandModel":{"Brand":"Digma","Model":"Sprint M"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":23.9,"Width":35.8,"Height":1.6,"Weight":1.82,"Volume":1368.992},"Color":"Black","Material":"MetalPlastic","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"182095f8-2b6b-466f-9bb6-8742f5caacc8"}}
+2024-01-18 11:29:50.301 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":1,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"61655aaf-fea5-4943-a906-32d527846a4d"}}
+2024-01-18 11:29:50.860 +00:00 [INF] Seed products are persisted successfully.
+2024-01-18 11:29:50.916 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-18 11:29:50.918 +00:00 [INF] Quartz Scheduler created
+2024-01-18 11:29:50.920 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-18 11:29:50.922 +00:00 [INF] RAMJobStore initialized.
+2024-01-18 11:29:50.924 +00:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-18 11:29:50.926 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-18 11:29:50.928 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-18 11:29:50.942 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-18 11:29:50.946 +00:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-18 11:29:51.126 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-18 11:29:51.127 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-18 11:29:51.129 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 11:29:51.131 +00:00 [INF] Hosting environment: Development
+2024-01-18 11:29:51.132 +00:00 [INF] Content root path: /app
+2024-01-18 11:29:51.139 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-18 11:29:55.660 +00:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-18 11:31:15.747 +00:00 [INF] HTTP POST /api/v1/products/laptop responded 400 in 9232.1099 ms
+2024-01-18 11:31:56.420 +00:00 [ERR] An exception occurred in the database while saving changes for context type 'Product.Infrastructure.ProductDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'RAMType', table 'Product.dbo.LaptopProducts'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:8342758b-7e87-476a-98b0-771184adaa70
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'RAMType', table 'Product.dbo.LaptopProducts'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:8342758b-7e87-476a-98b0-771184adaa70
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-01-18 11:31:56.713 +00:00 [ERR] HTTP POST /api/v1/products/laptop responded 500 in 8721.7740 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'RAMType', table 'Product.dbo.LaptopProducts'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:8342758b-7e87-476a-98b0-771184adaa70
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Product.Application.Product.Commands.Create.BaseCreateProductCommandHandler`2.Handle(CreateProductCommand`1 request, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Application\Product\Commands\Create\BaseCreateProductCommandHandler.cs:line 56
+   at AppCommon.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Common\AppCommon\Behaviors\ValidationBehavior.cs:line 38
+   at Product.Api.ProductEndpoints.V1.CreateController.CreateLaptopProduct(CreateProductCommand`1 createLaptopProductCommand) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\CreateController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-18 11:31:56.736 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'RAMType', table 'Product.dbo.LaptopProducts'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:8342758b-7e87-476a-98b0-771184adaa70
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Product.Application.Product.Commands.Create.BaseCreateProductCommandHandler`2.Handle(CreateProductCommand`1 request, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Application\Product\Commands\Create\BaseCreateProductCommandHandler.cs:line 56
+   at AppCommon.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Common\AppCommon\Behaviors\ValidationBehavior.cs:line 38
+   at Product.Api.ProductEndpoints.V1.CreateController.CreateLaptopProduct(CreateProductCommand`1 createLaptopProductCommand) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\CreateController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-18 11:36:48.766 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 11:36:49.011 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 11:36:50.169 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 11:36:51.847 +00:00 [INF] Creating seed Products...
+2024-01-18 11:36:52.015 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"2c3c6dca-eb88-4118-a6b1-477552fb3803"}}
+2024-01-18 11:36:52.016 +00:00 [INF] {"OperatingSystem":"Windows","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i3 1115G4"},"FrequencyGgc":3.0,"CoreCount":2,"ThreadCount":4},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"UHD Graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":256,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":51,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Digma Pro Sprint M DN15P3-8CXW02","Description":"Digma Pro Sprint M DN15P3-8CXW02"},"BrandModel":{"Brand":"Digma","Model":"Sprint M"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":23.9,"Width":35.8,"Height":1.6,"Weight":1.82,"Volume":1368.992},"Color":"Black","Material":"MetalPlastic","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"c9d1dc4d-33ce-47b1-a02a-777bbaebf8f2"}}
+2024-01-18 11:36:52.017 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":1,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"c83b6787-11bd-4b1e-8be2-01d1cc8fc4b7"}}
+2024-01-18 11:36:52.596 +00:00 [INF] Seed products are persisted successfully.
+2024-01-18 11:36:52.652 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-18 11:36:52.653 +00:00 [INF] Quartz Scheduler created
+2024-01-18 11:36:52.655 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-18 11:36:52.657 +00:00 [INF] RAMJobStore initialized.
+2024-01-18 11:36:52.659 +00:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-18 11:36:52.660 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-18 11:36:52.662 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-18 11:36:52.676 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-18 11:36:52.679 +00:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-18 11:36:52.814 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-18 11:36:52.815 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-18 11:36:52.817 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 11:36:52.818 +00:00 [INF] Hosting environment: Development
+2024-01-18 11:36:52.819 +00:00 [INF] Content root path: /app
+2024-01-18 11:36:52.825 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-18 11:36:57.142 +00:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-18 11:37:29.037 +00:00 [INF] HTTP POST /api/v1/products/laptop responded 400 in 20738.9337 ms
+2024-01-18 11:37:41.857 +00:00 [INF] HTTP POST /api/v1/products/laptop responded 400 in 2299.6862 ms
+2024-01-18 11:38:10.013 +00:00 [ERR] HTTP POST /api/v1/products/laptop responded 500 in 4945.6140 ms
+System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Product.Api.ProductEndpoints.V1.CreateController.CreateLaptopProduct(CreateProductCommand`1 createLaptopProductCommand) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\CreateController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-18 11:38:10.055 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Product.Api.ProductEndpoints.V1.CreateController.CreateLaptopProduct(CreateProductCommand`1 createLaptopProductCommand) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\CreateController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-18 11:38:44.523 +00:00 [ERR] HTTP POST /api/v1/products/laptop responded 500 in 218.9890 ms
+System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Product.Api.ProductEndpoints.V1.CreateController.CreateLaptopProduct(CreateProductCommand`1 createLaptopProductCommand) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\CreateController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-18 11:38:44.529 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Product.Api.ProductEndpoints.V1.CreateController.CreateLaptopProduct(CreateProductCommand`1 createLaptopProductCommand) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\CreateController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-18 11:39:19.599 +00:00 [INF] HTTP GET /api/v1/products responded 200 in 197.6922 ms
+2024-01-18 11:46:18.675 +00:00 [FTL] When starting the web server, an exception occurred 01/18/2024 11:46:18.
+System.InvalidOperationException: Action 'Product.Api.ProductEndpoints.V1.CreateController.CreateLaptopProduct (Product.Api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+HttpContext context
+CreateProductCommand<LaptopProductRequest> createLaptopProductCommand
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.InferParameterBindingInfoConvention.InferParameterBindingSources(ActionModel action)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Asp.Versioning.ApiExplorer.ActionApiVersionMetadataCollationProvider.get_Version()
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.ApiVersionDescriptionCollection.ComputeVersion(IApiVersionMetadataCollationProvider[] providers)
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.ApiVersionDescriptionCollection.ComputeVersion()
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.ApiVersionDescriptionCollection.get_Items()
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.get_ApiVersionDescriptions()
+   at Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.DescribeApiVersions(IEndpointRouteBuilder endpoints)
+   at Presentation.WebServer.<>c__DisplayClass7_0.<Configure>b__0(SwaggerUIOptions options) in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 82
+   at Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions.UseSwaggerUI(IApplicationBuilder app, Action`1 setupAction)
+   at Presentation.WebServer.Configure(WebApplication app) in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 80
+   at Presentation.WebServer.BuildAndRunAsync() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 120
+2024-01-18 11:46:40.325 +00:00 [FTL] When starting the web server, an exception occurred 01/18/2024 11:46:40.
+System.InvalidOperationException: Action 'Product.Api.ProductEndpoints.V1.CreateController.CreateLaptopProduct (Product.Api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+HttpContext context
+CreateProductCommand<LaptopProductRequest> createLaptopProductCommand
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.InferParameterBindingInfoConvention.InferParameterBindingSources(ActionModel action)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Asp.Versioning.ApiExplorer.ActionApiVersionMetadataCollationProvider.get_Version()
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.ApiVersionDescriptionCollection.ComputeVersion(IApiVersionMetadataCollationProvider[] providers)
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.ApiVersionDescriptionCollection.ComputeVersion()
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.ApiVersionDescriptionCollection.get_Items()
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.get_ApiVersionDescriptions()
+   at Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.DescribeApiVersions(IEndpointRouteBuilder endpoints)
+   at Presentation.WebServer.<>c__DisplayClass7_0.<Configure>b__0(SwaggerUIOptions options) in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 82
+   at Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions.UseSwaggerUI(IApplicationBuilder app, Action`1 setupAction)
+   at Presentation.WebServer.Configure(WebApplication app) in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 80
+   at Presentation.WebServer.BuildAndRunAsync() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 120
+2024-01-18 11:47:37.330 +00:00 [FTL] When starting the web server, an exception occurred 01/18/2024 11:47:37.
+System.InvalidOperationException: Action 'Product.Api.ProductEndpoints.V1.CreateController.CreateLaptopProduct (Product.Api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+HttpContext context
+CreateProductCommand<LaptopProductRequest> createLaptopProductCommand
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.InferParameterBindingInfoConvention.InferParameterBindingSources(ActionModel action)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Asp.Versioning.ApiExplorer.ActionApiVersionMetadataCollationProvider.get_Version()
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.ApiVersionDescriptionCollection.ComputeVersion(IApiVersionMetadataCollationProvider[] providers)
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.ApiVersionDescriptionCollection.ComputeVersion()
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.ApiVersionDescriptionCollection.get_Items()
+   at Asp.Versioning.ApiExplorer.DefaultApiVersionDescriptionProvider.get_ApiVersionDescriptions()
+   at Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.DescribeApiVersions(IEndpointRouteBuilder endpoints)
+   at Presentation.WebServer.<>c__DisplayClass7_0.<Configure>b__0(SwaggerUIOptions options) in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 82
+   at Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions.UseSwaggerUI(IApplicationBuilder app, Action`1 setupAction)
+   at Presentation.WebServer.Configure(WebApplication app) in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 80
+   at Presentation.WebServer.BuildAndRunAsync() in D:\Projects\EpicTradeShop\src\Common\Presentation\WebServer.cs:line 120
+2024-01-18 11:49:34.663 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 11:49:34.803 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 11:49:36.063 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 11:49:37.799 +00:00 [INF] Creating seed Products...
+2024-01-18 11:49:37.966 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"c3cc2f8d-9ecc-4888-9fb7-8820a0871c83"}}
+2024-01-18 11:49:37.968 +00:00 [INF] {"OperatingSystem":"Windows","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i3 1115G4"},"FrequencyGgc":3.0,"CoreCount":2,"ThreadCount":4},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"UHD Graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":256,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":51,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Digma Pro Sprint M DN15P3-8CXW02","Description":"Digma Pro Sprint M DN15P3-8CXW02"},"BrandModel":{"Brand":"Digma","Model":"Sprint M"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":23.9,"Width":35.8,"Height":1.6,"Weight":1.82,"Volume":1368.992},"Color":"Black","Material":"MetalPlastic","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"8fc4cd69-d0d1-40b2-aeeb-a656782fa73f"}}
+2024-01-18 11:49:37.969 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":1,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"4670fe6b-ffd3-4bf9-94a0-d4f543acca60"}}
+2024-01-18 11:49:38.500 +00:00 [INF] Seed products are persisted successfully.
+2024-01-18 11:49:38.556 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-18 11:49:38.557 +00:00 [INF] Quartz Scheduler created
+2024-01-18 11:49:38.559 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-18 11:49:38.561 +00:00 [INF] RAMJobStore initialized.
+2024-01-18 11:49:38.562 +00:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-18 11:49:38.564 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-18 11:49:38.565 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-18 11:49:38.579 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-18 11:49:38.583 +00:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-18 11:49:38.717 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-18 11:49:38.717 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-18 11:49:38.719 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 11:49:38.721 +00:00 [INF] Hosting environment: Development
+2024-01-18 11:49:38.722 +00:00 [INF] Content root path: /app
+2024-01-18 11:49:38.752 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-18 11:49:43.187 +00:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-18 11:50:45.195 +00:00 [INF] HTTP POST /api/v1/products/laptop responded 201 in 20431.2515 ms
+2024-01-18 12:00:21.428 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 12:00:21.589 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 12:00:23.081 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 12:00:24.865 +00:00 [INF] Creating seed Products...
+2024-01-18 12:00:25.113 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"152dcc0d-3c69-4559-90d1-93bfe2a7fcd8"}}
+2024-01-18 12:00:25.115 +00:00 [INF] {"OperatingSystem":"Windows","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i3 1115G4"},"FrequencyGgc":3.0,"CoreCount":2,"ThreadCount":4},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"UHD Graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":256,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":51,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Digma Pro Sprint M DN15P3-8CXW02","Description":"Digma Pro Sprint M DN15P3-8CXW02"},"BrandModel":{"Brand":"Digma","Model":"Sprint M"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":23.9,"Width":35.8,"Height":1.6,"Weight":1.82,"Volume":1368.992},"Color":"Black","Material":"MetalPlastic","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"7e18525a-203c-4523-8c9d-09e65025fbd4"}}
+2024-01-18 12:00:25.116 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":1,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"af1a2a25-f8ae-457a-a3d5-247c2972313c"}}
+2024-01-18 12:00:25.708 +00:00 [INF] Seed products are persisted successfully.
+2024-01-18 12:00:25.781 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-18 12:00:25.782 +00:00 [INF] Quartz Scheduler created
+2024-01-18 12:00:25.784 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-18 12:00:25.786 +00:00 [INF] RAMJobStore initialized.
+2024-01-18 12:00:25.788 +00:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-18 12:00:25.790 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-18 12:00:25.792 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-18 12:00:25.807 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-18 12:00:25.812 +00:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-18 12:00:25.970 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-18 12:00:25.971 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-18 12:00:25.973 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 12:00:25.977 +00:00 [INF] Hosting environment: Development
+2024-01-18 12:00:25.979 +00:00 [INF] Content root path: /app
+2024-01-18 12:00:25.986 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-18 12:00:29.702 +00:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-18 12:07:00.798 +00:00 [INF] HTTP GET /api/v1/products responded 200 in 242.0854 ms
+2024-01-18 12:07:34.722 +00:00 [ERR] HTTP GET /api/v1/products/152dcc0d-3c69-4559-90d1-93bfe2a7fcd8 responded 500 in 382.7048 ms
+System.InvalidOperationException: A parameterless default constructor or one matching signature (System.String Id, System.String Type, System.String Status, System.Int32 StockQuantity, System.String Name, System.String Description, System.String Brand, System.String Model, System.Decimal Price, System.Decimal Length, System.Decimal Width, System.Decimal Height, System.Decimal Weight, System.String Color, System.String Material, System.String OperatingSystem, System.String ProcessorBrand, System.String ProcessorModel, System.Decimal ProcessorFrequencyGgc, System.Int32 ProcessorCoreCount, System.Int32 ProcessorThreadCount, System.String GraphicsControllerType, System.String GraphicsBrand, System.String GraphicsModel, System.Int32 VideoMemoryVolumeMb, System.Decimal ScreenDiagonalInch, System.Int32 ScreenWidthPx, System.Int32 ScreenHeightPx, System.Int32 RefreshRateGc, System.Int32 ViewingAngleDeg, System.String RamType, System.Int32 RamVolumeGb, System.Decimal RamFrequencyMgc, System.Boolean RamIsUpgradeable, System.String StorageType, System.Int32 StorageVolumeGb, System.Boolean StorageIsUpgradeable, System.String BatteryType, System.Int32 BatteryCellCount, System.Int32 BatteryCapacityWh, System.Int32 BatteryMaxWorktimeHrs) is required for Product.Application.Responses.LaptopProductResponse materialization
+   at Dapper.SqlMapper.GenerateDeserializerFromMap(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing, ILGenerator il) in /_/Dapper/SqlMapper.cs:line 3473
+   at Dapper.SqlMapper.GetTypeDeserializerImpl(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3304
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 151
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 50
+   at Dapper.SqlMapper.GetTypeDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3258
+   at Dapper.SqlMapper.GetDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 1945
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command)
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetLaptopProductByIdAsync(IDbConnection connection, ID productId) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 139
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetProductByIdAsync(ID productId, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 96
+   at Product.Application.Product.Queries.GetById.GetProductByIdQueryHandler.Handle(GetProductByIdQuery request, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Application\Product\Queries\GetById\GetProductByIdQueryHandler.cs:line 20
+   at AppCommon.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Common\AppCommon\Behaviors\ValidationBehavior.cs:line 38
+   at Product.Api.ProductEndpoints.V1.GetById.HandleAsync(GetProductByIdQuery request) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 39
+   at Product.Api.ProductEndpoints.V1.GetById.<ConfigureRoute>b__2_0(Guid productId) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-18 12:07:34.764 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: A parameterless default constructor or one matching signature (System.String Id, System.String Type, System.String Status, System.Int32 StockQuantity, System.String Name, System.String Description, System.String Brand, System.String Model, System.Decimal Price, System.Decimal Length, System.Decimal Width, System.Decimal Height, System.Decimal Weight, System.String Color, System.String Material, System.String OperatingSystem, System.String ProcessorBrand, System.String ProcessorModel, System.Decimal ProcessorFrequencyGgc, System.Int32 ProcessorCoreCount, System.Int32 ProcessorThreadCount, System.String GraphicsControllerType, System.String GraphicsBrand, System.String GraphicsModel, System.Int32 VideoMemoryVolumeMb, System.Decimal ScreenDiagonalInch, System.Int32 ScreenWidthPx, System.Int32 ScreenHeightPx, System.Int32 RefreshRateGc, System.Int32 ViewingAngleDeg, System.String RamType, System.Int32 RamVolumeGb, System.Decimal RamFrequencyMgc, System.Boolean RamIsUpgradeable, System.String StorageType, System.Int32 StorageVolumeGb, System.Boolean StorageIsUpgradeable, System.String BatteryType, System.Int32 BatteryCellCount, System.Int32 BatteryCapacityWh, System.Int32 BatteryMaxWorktimeHrs) is required for Product.Application.Responses.LaptopProductResponse materialization
+   at Dapper.SqlMapper.GenerateDeserializerFromMap(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing, ILGenerator il) in /_/Dapper/SqlMapper.cs:line 3473
+   at Dapper.SqlMapper.GetTypeDeserializerImpl(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3304
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 151
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 50
+   at Dapper.SqlMapper.GetTypeDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3258
+   at Dapper.SqlMapper.GetDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 1945
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command)
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetLaptopProductByIdAsync(IDbConnection connection, ID productId) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 139
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetProductByIdAsync(ID productId, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 96
+   at Product.Application.Product.Queries.GetById.GetProductByIdQueryHandler.Handle(GetProductByIdQuery request, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Application\Product\Queries\GetById\GetProductByIdQueryHandler.cs:line 20
+   at AppCommon.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Common\AppCommon\Behaviors\ValidationBehavior.cs:line 38
+   at Product.Api.ProductEndpoints.V1.GetById.HandleAsync(GetProductByIdQuery request) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 39
+   at Product.Api.ProductEndpoints.V1.GetById.<ConfigureRoute>b__2_0(Guid productId) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-18 12:17:34.085 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 12:17:34.250 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 12:17:35.517 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 12:17:37.219 +00:00 [INF] Creating seed Products...
+2024-01-18 12:17:37.393 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"db6a91c3-8664-4a24-bdb6-1790a3496043"}}
+2024-01-18 12:17:37.395 +00:00 [INF] {"OperatingSystem":"Windows","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i3 1115G4"},"FrequencyGgc":3.0,"CoreCount":2,"ThreadCount":4},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"UHD Graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":256,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":51,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Digma Pro Sprint M DN15P3-8CXW02","Description":"Digma Pro Sprint M DN15P3-8CXW02"},"BrandModel":{"Brand":"Digma","Model":"Sprint M"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":23.9,"Width":35.8,"Height":1.6,"Weight":1.82,"Volume":1368.992},"Color":"Black","Material":"MetalPlastic","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"829b3466-34d5-43b5-aa26-ced0f2d7f878"}}
+2024-01-18 12:17:37.396 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":1,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"e53b8354-e239-4dc2-bfa8-4cb849c6475a"}}
+2024-01-18 12:17:37.917 +00:00 [INF] Seed products are persisted successfully.
+2024-01-18 12:17:37.972 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-18 12:17:37.973 +00:00 [INF] Quartz Scheduler created
+2024-01-18 12:17:37.975 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-18 12:17:37.977 +00:00 [INF] RAMJobStore initialized.
+2024-01-18 12:17:37.978 +00:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-18 12:17:37.980 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-18 12:17:37.981 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-18 12:17:37.994 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-18 12:17:37.998 +00:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-18 12:17:38.185 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-18 12:17:38.186 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-18 12:17:38.188 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 12:17:38.190 +00:00 [INF] Hosting environment: Development
+2024-01-18 12:17:38.190 +00:00 [INF] Content root path: /app
+2024-01-18 12:17:38.221 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-18 12:17:42.519 +00:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-18 12:18:05.574 +00:00 [INF] HTTP GET /api/v1/products responded 200 in 236.3132 ms
+2024-01-18 12:18:34.688 +00:00 [ERR] HTTP GET /api/v1/products/829b3466-34d5-43b5-aa26-ced0f2d7f878 responded 500 in 411.7047 ms
+System.InvalidOperationException: A parameterless default constructor or one matching signature (System.String Id, System.String Type, System.String Status, System.Int32 StockQuantity, System.String Name, System.String Description, System.String Brand, System.String Model, System.Decimal Price, System.Decimal Length, System.Decimal Width, System.Decimal Height, System.Decimal Weight, System.String Color, System.String Material, System.String OperatingSystem, System.String ProcessorBrand, System.String ProcessorModel, System.Decimal ProcessorFrequencyGgc, System.Int32 ProcessorCoreCount, System.Int32 ProcessorThreadCount, System.String GraphicsControllerType, System.String GraphicsBrand, System.String GraphicsModel, System.Int32 VideoMemoryVolumeMb, System.Decimal ScreenDiagonalInch, System.Int32 ScreenWidthPx, System.Int32 ScreenHeightPx, System.Int32 RefreshRateGc, System.Int32 ViewingAngleDeg, System.String RamType, System.Int32 RamVolumeGb, System.Decimal RamFrequencyMgc, System.Boolean RamIsUpgradeable, System.String StorageType, System.Int32 StorageVolumeGb, System.Boolean StorageIsUpgradeable, System.String BatteryType, System.Int32 BatteryCellCount, System.Int32 BatteryCapacityWh, System.Int32 BatteryMaxWorktimeHrs) is required for Product.Application.Responses.LaptopProductResponse materialization
+   at Dapper.SqlMapper.GenerateDeserializerFromMap(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing, ILGenerator il) in /_/Dapper/SqlMapper.cs:line 3473
+   at Dapper.SqlMapper.GetTypeDeserializerImpl(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3304
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 151
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 50
+   at Dapper.SqlMapper.GetTypeDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3258
+   at Dapper.SqlMapper.GetDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 1945
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command)
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetLaptopProductByIdAsync(IDbConnection connection, ID productId) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 139
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetProductByIdAsync(ID productId, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 96
+   at Product.Application.Product.Queries.GetById.GetProductByIdQueryHandler.Handle(GetProductByIdQuery request, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Application\Product\Queries\GetById\GetProductByIdQueryHandler.cs:line 20
+   at AppCommon.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Common\AppCommon\Behaviors\ValidationBehavior.cs:line 38
+   at Product.Api.ProductEndpoints.V1.GetById.HandleAsync(GetProductByIdQuery request) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 39
+   at Product.Api.ProductEndpoints.V1.GetById.<ConfigureRoute>b__2_0(Guid productId) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-01-18 12:18:34.728 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: A parameterless default constructor or one matching signature (System.String Id, System.String Type, System.String Status, System.Int32 StockQuantity, System.String Name, System.String Description, System.String Brand, System.String Model, System.Decimal Price, System.Decimal Length, System.Decimal Width, System.Decimal Height, System.Decimal Weight, System.String Color, System.String Material, System.String OperatingSystem, System.String ProcessorBrand, System.String ProcessorModel, System.Decimal ProcessorFrequencyGgc, System.Int32 ProcessorCoreCount, System.Int32 ProcessorThreadCount, System.String GraphicsControllerType, System.String GraphicsBrand, System.String GraphicsModel, System.Int32 VideoMemoryVolumeMb, System.Decimal ScreenDiagonalInch, System.Int32 ScreenWidthPx, System.Int32 ScreenHeightPx, System.Int32 RefreshRateGc, System.Int32 ViewingAngleDeg, System.String RamType, System.Int32 RamVolumeGb, System.Decimal RamFrequencyMgc, System.Boolean RamIsUpgradeable, System.String StorageType, System.Int32 StorageVolumeGb, System.Boolean StorageIsUpgradeable, System.String BatteryType, System.Int32 BatteryCellCount, System.Int32 BatteryCapacityWh, System.Int32 BatteryMaxWorktimeHrs) is required for Product.Application.Responses.LaptopProductResponse materialization
+   at Dapper.SqlMapper.GenerateDeserializerFromMap(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing, ILGenerator il) in /_/Dapper/SqlMapper.cs:line 3473
+   at Dapper.SqlMapper.GetTypeDeserializerImpl(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3304
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 151
+   at Dapper.SqlMapper.TypeDeserializerCache.GetReader(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.TypeDeserializerCache.cs:line 50
+   at Dapper.SqlMapper.GetTypeDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 3258
+   at Dapper.SqlMapper.GetDeserializer(Type type, DbDataReader reader, Int32 startBound, Int32 length, Boolean returnNullIfFirstMissing) in /_/Dapper/SqlMapper.cs:line 1945
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command)
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetLaptopProductByIdAsync(IDbConnection connection, ID productId) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 139
+   at Product.Infrastructure.Data.QueryServices.ProductsQueryService.GetProductByIdAsync(ID productId, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Infrastructure\Data\QueryServices\ProductsQueryService.cs:line 96
+   at Product.Application.Product.Queries.GetById.GetProductByIdQueryHandler.Handle(GetProductByIdQuery request, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Product\Product.Application\Product\Queries\GetById\GetProductByIdQueryHandler.cs:line 20
+   at AppCommon.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\Projects\EpicTradeShop\src\Common\AppCommon\Behaviors\ValidationBehavior.cs:line 38
+   at Product.Api.ProductEndpoints.V1.GetById.HandleAsync(GetProductByIdQuery request) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 39
+   at Product.Api.ProductEndpoints.V1.GetById.<ConfigureRoute>b__2_0(Guid productId) in D:\Projects\EpicTradeShop\src\Product\Product.Api\ProductEndpoints\V1\GetById.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Presentation.Middlewares.ValidationExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EpicTradeShop\src\Common\Presentation\Middlewares\ValidationExceptionHandlingMiddleware.cs:line 20
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-18 12:22:46.416 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 12:22:46.599 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 12:22:47.828 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 12:22:49.540 +00:00 [INF] Creating seed Products...
+2024-01-18 12:22:49.729 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"0f651b6b-ef2a-49ce-8ec2-ffdf52f744ac"}}
+2024-01-18 12:22:49.730 +00:00 [INF] {"OperatingSystem":"Windows","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i3 1115G4"},"FrequencyGgc":3.0,"CoreCount":2,"ThreadCount":4},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"UHD Graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":256,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":51,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Digma Pro Sprint M DN15P3-8CXW02","Description":"Digma Pro Sprint M DN15P3-8CXW02"},"BrandModel":{"Brand":"Digma","Model":"Sprint M"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":23.9,"Width":35.8,"Height":1.6,"Weight":1.82,"Volume":1368.992},"Color":"Black","Material":"MetalPlastic","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"e3d8255e-e0dc-4a94-8e99-d420921abbd6"}}
+2024-01-18 12:22:49.731 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":1,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"8e1206a8-3b06-486a-9697-97ab4ba2bc49"}}
+2024-01-18 12:22:50.242 +00:00 [INF] Seed products are persisted successfully.
+2024-01-18 12:22:50.297 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-18 12:22:50.298 +00:00 [INF] Quartz Scheduler created
+2024-01-18 12:22:50.301 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-18 12:22:50.302 +00:00 [INF] RAMJobStore initialized.
+2024-01-18 12:22:50.304 +00:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-18 12:22:50.305 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-18 12:22:50.307 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-18 12:22:50.321 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-18 12:22:50.325 +00:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-18 12:22:50.480 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-18 12:22:50.481 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-18 12:22:50.483 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 12:22:50.485 +00:00 [INF] Hosting environment: Development
+2024-01-18 12:22:50.486 +00:00 [INF] Content root path: /app
+2024-01-18 12:22:50.513 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-18 12:22:54.999 +00:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-18 12:23:21.726 +00:00 [INF] HTTP GET /api/v1/products responded 200 in 267.0734 ms
+2024-01-18 12:23:36.903 +00:00 [INF] HTTP GET /api/v1/products/0f651b6b-ef2a-49ce-8ec2-ffdf52f744ac responded 200 in 106.9358 ms
+2024-01-18 12:23:52.037 +00:00 [INF] HTTP GET /api/v1/products/0f651b6b-ef2a-49ce-8ec2-ffdf52f744ac responded 200 in 37.0432 ms
+2024-01-18 12:28:34.656 +00:00 [INF] HTTP GET /api/v1/products/0f651b6b-ef2a-49ce-8ec2-ffdf52f744ac responded 200 in 156808.1403 ms
+2024-01-18 12:31:38.796 +00:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-01-18 12:31:38.949 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 12:31:40.180 +00:00 [WRN] No store type was specified for the decimal property 'Weight' on entity type 'DimensionsInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-18 12:31:42.015 +00:00 [INF] Creating seed Products...
+2024-01-18 12:31:42.193 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"8500f74a-ce21-4cc2-96cf-ea7294ae9f32"}}
+2024-01-18 12:31:42.194 +00:00 [INF] {"OperatingSystem":"Windows","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i3 1115G4"},"FrequencyGgc":3.0,"CoreCount":2,"ThreadCount":4},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"UHD Graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":3200,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":256,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":51,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Digma Pro Sprint M DN15P3-8CXW02","Description":"Digma Pro Sprint M DN15P3-8CXW02"},"BrandModel":{"Brand":"Digma","Model":"Sprint M"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":23.9,"Width":35.8,"Height":1.6,"Weight":1.82,"Volume":1368.992},"Color":"Black","Material":"MetalPlastic","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"d9070045-0453-47c2-8fcc-e84c241877bd"}}
+2024-01-18 12:31:42.195 +00:00 [INF] {"OperatingSystem":"None","Processor":{"BrandModel":{"Brand":"Intel","Model":"Core i5 1155G7"},"FrequencyGgc":2.5,"CoreCount":4,"ThreadCount":8},"Graphics":{"GraphicsControllerType":"Integrated","BrandModel":{"Brand":"Intel","Model":"Iris Xe graphics"},"VideoMemoryVolumeMb":0},"Display":{"ScreenDiagonalInch":15.6,"ScreenResolution":{"Width":1920,"Height":1080},"RefreshRateGc":60,"ViewingAngleDeg":178},"Ram":{"Type":"DDR4","VolumeGb":8,"FrequencyMgc":1,"IsUpgradeable":false},"Storage":{"StorageType":"SSD","VolumeGb":512,"IsUpgradeable":false},"Battery":{"BatteryType":"LiPol","CellCount":3,"CapacityWh":42,"MaxWorktimeHrs":24},"Type":"Laptop","ProductDetails":{"Name":"Huawei MateBook D 15","Description":"Huawei MateBook D 15"},"BrandModel":{"Brand":"HUAWEI","Model":"BoDe - WDH9"},"Price":null,"StockQuantity":0,"Dimensions":{"Length":22.9,"Width":35.7,"Height":1.6,"Weight":1.56,"Volume":1308.048},"Color":"BurgundyRed","Material":"Aluminum","Status":"Draft","Categories":[],"Images":[],"DomainEvents":[],"Id":{"Key":"f92f6cfa-8f03-4cea-9841-117e2c18c2f8"}}
+2024-01-18 12:31:42.714 +00:00 [INF] Seed products are persisted successfully.
+2024-01-18 12:31:42.766 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-01-18 12:31:42.767 +00:00 [INF] Quartz Scheduler created
+2024-01-18 12:31:42.770 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-01-18 12:31:42.772 +00:00 [INF] RAMJobStore initialized.
+2024-01-18 12:31:42.774 +00:00 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-01-18 12:31:42.775 +00:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-01-18 12:31:42.777 +00:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-01-18 12:31:42.792 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2024-01-18 12:31:42.795 +00:00 [INF] Adding job: DEFAULT.ProcessOutboxMessagesJob
+2024-01-18 12:31:42.938 +00:00 [INF] Now listening on: https://[::]:443
+2024-01-18 12:31:42.939 +00:00 [INF] Now listening on: http://[::]:80
+2024-01-18 12:31:42.941 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-18 12:31:42.943 +00:00 [INF] Hosting environment: Development
+2024-01-18 12:31:42.944 +00:00 [INF] Content root path: /app
+2024-01-18 12:31:42.950 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-01-18 12:31:47.352 +00:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-18 12:31:53.675 +00:00 [INF] HTTP GET /api/v1/products responded 200 in 244.3613 ms
+2024-01-18 12:32:24.710 +00:00 [INF] HTTP GET /api/v1/products/8500f74a-ce21-4cc2-96cf-ea7294ae9f32 responded 200 in 12136.1364 ms

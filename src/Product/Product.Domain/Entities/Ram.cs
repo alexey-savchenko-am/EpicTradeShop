@@ -10,19 +10,19 @@ public class Ram
     public RamType Type { get; }
     public int VolumeGb { get; }
     public decimal FrequencyMgc { get; }
-    public bool IsUpgradable { get; }
+    public bool IsUpgradeable { get; }
 
     private static Error RamError(Error innerError) 
         => new("Ram.Create", "Can not create RAM", innerError);
 
     private Ram() { }
 
-    public Ram(RamType type, int volumeGb, decimal frequencyMgc, bool isUpgradable)
+    public Ram(RamType type, int volumeGb, decimal frequencyMgc, bool isUpgradeable)
     {
         Type = type;
         VolumeGb = volumeGb;
         FrequencyMgc = frequencyMgc;
-        IsUpgradable = isUpgradable;
+        IsUpgradeable = isUpgradeable;
     }
 
     public static Result<Ram> Create(RamType type, int volumeGb, decimal frequencyMgc, bool isUpgradeable = false)
@@ -44,6 +44,6 @@ public class Ram
         yield return Type;
         yield return VolumeGb;
         yield return FrequencyMgc;
-        yield return IsUpgradable;
+        yield return IsUpgradeable;
     }
 }

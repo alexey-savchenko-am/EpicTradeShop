@@ -87,20 +87,32 @@ public abstract class BaseCreateProductCommandHandler<TConcreteProductRequest, T
             return CreateProductError(dimensionsResult.Error);
         }
 
-        return new ProductEntities(productDetailsResult, brandModelResult, dimensionsResult);
+        return new ProductEntities(
+            command.Color, 
+            command.Material, 
+            productDetailsResult, 
+            brandModelResult, 
+            dimensionsResult);
     }
 
     protected class ProductEntities
     {
         public ProductEntities(
+            Color color,
+            Material material,
             ProductDetails productDetails, 
             BrandModel brandModel, 
             DimensionsInfo dimensionsInfo)
         {
+            Color = color;
+            Material = material;
             ProductDetails = productDetails;
             BrandModel = brandModel;
             DimensionsInfo = dimensionsInfo;
         }
+
+        public Color Color { get; }
+        public Material Material { get; }
         public ProductDetails ProductDetails { get; }
         public BrandModel BrandModel { get; }
         public DimensionsInfo DimensionsInfo { get; }

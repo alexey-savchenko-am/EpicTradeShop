@@ -8,28 +8,28 @@ public class DimensionsInfo : ValueObject
     /// <summary>
     /// Length in cm
     /// </summary>
-    public int Length { get; }
+    public decimal Length { get; }
 
     /// <summary>
     /// Width in cm
     /// </summary>
-    public int Width { get; }
+    public decimal Width { get; }
 
     /// <summary>
     /// Height in cm
     /// </summary>
-    public int Height { get; }
+    public decimal Height { get; }
 
     /// <summary>
-    /// Weight in grams
+    /// Weight in kg
     /// </summary>
-    public int Weight { get; }
+    public decimal Weight { get; }
 
     public decimal Volume => Length * Width * Height;
 
     private DimensionsInfo() { }
 
-    private DimensionsInfo(int length, int width, int height, int weight)
+    private DimensionsInfo(decimal length, decimal width, decimal height, decimal weight)
     {
         Length = length;
         Width = width;
@@ -37,7 +37,7 @@ public class DimensionsInfo : ValueObject
         Weight = weight;
     }
 
-    public static Result<DimensionsInfo> Create(int length, int width, int height, int weight)
+    public static Result<DimensionsInfo> Create(decimal length, decimal width, decimal height, decimal weight)
     {
         if (length <= 0 || width <= 0 || height <= 0)
         {
