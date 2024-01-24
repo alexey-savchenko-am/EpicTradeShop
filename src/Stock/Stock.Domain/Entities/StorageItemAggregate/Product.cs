@@ -11,9 +11,8 @@ public sealed class Product
     public ProductStatus Status { get; private set; }
     public DimensionsInfo Dimensions { get; }
 
-    private Product()
-        : base(new ID(Guid.NewGuid()))
-    { }
+    #pragma warning disable CS8618
+    private Product() : base(new ID(Guid.NewGuid())){ }
 
     private Product(Product.ID productId, DimensionsInfo dimensions)
         : base(productId)

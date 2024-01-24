@@ -1,12 +1,15 @@
 ﻿using AppCommon.Persistence;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Persistence;
 using Persistence.BackgroundJobs;
+using Persistence.EventBus;
 using Persistence.Interceptors;
 using Product.Application.Abstract;
-using Product.Domain.Entities.ProductAggregate.ConcreteProducts;
+using Product.Infrastructure.Data;
 using Product.Infrastructure.Data.QueryServices;
 using Product.Infrastructure.Data.Repositories;
 using Quartz;
@@ -15,13 +18,16 @@ namespace Product.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services)
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         var assembly = typeof(DependencyInjection).Assembly;
 
+        services.Configure<MessageBrokerSettings>(configuration.GetSection("MessageBroker"));
         services.ConfigureOptions<DatabaseOptionsSetup>();
         services.AddSingleton<ConvertDomainEventsToOutboxMessagesInterceptor>();
         services.AddSingleton<IDbConnectionFactory, DbConnectionFactory>();
+        services.AddSingleton(provider => 
+            provider.GetRequiredService<IOptions<MessageBrokerSettings>>().Value);
 
         services.AddDbContext<DbContext, ProductDbContext>((provider, builder) =>
         {
@@ -40,19 +46,26 @@ public static class DependencyInjection
             builder.EnableSensitiveDataLogging(options.EnableSensitiveDataLogging);
         });
 
-        services.AddQuartz(configure =>
+        services.AddMassTransit(busConfiguration =>
         {
-            var jobKey = new JobKey(nameof(ProcessOutboxMessagesJob));
+            busConfiguration.SetKebabCaseEndpointNameFormatter();
 
-            configure.AddJob<ProcessOutboxMessagesJob>(jobKey)
-                .AddTrigger(trigger => 
-                    trigger.ForJob(jobKey).WithSimpleSchedule(schedule => 
-                        schedule.WithIntervalInSeconds(10).RepeatForever()));
+            busConfiguration.UsingRabbitMq((context, configurator) =>
+            {
+                var settings = context.GetRequiredService<MessageBrokerSettings>();
+
+                configurator.Host(new Uri(settings.Host), h =>
+                {
+                    h.Username(settings.Username);
+                    h.Password(settings.Password);
+                });
+            });
         });
 
-        services.AddQuartzHostedService();
+        services.AddOutboxMessageBasedEventBus();
+        services.AddQuartzAndOutboxMessagesJob();
 
-        services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<ISession, Session>();
         services.AddScoped<IDatabaseInitializer, ProductDbContextSeed>();
         services.AddScoped(typeof(IProductRepository<>), typeof(ProductRepository<>));
         services.AddScoped<IProductsQueryService, ProductsQueryService>();

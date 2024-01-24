@@ -100,6 +100,7 @@ internal class ProductConfiguration
             dimensions
                 .Property(dimemsion => dimemsion.Weight)
                 .HasColumnName("Weight")
+                .HasPrecision(8, 2)
                 .IsRequired();
         });
 

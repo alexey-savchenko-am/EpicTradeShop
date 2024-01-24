@@ -1,4 +1,6 @@
 ﻿
+using System.Text.Json.Serialization;
+
 namespace SharedKernel;
 
 public abstract class Entity<TKey>
@@ -33,6 +35,7 @@ public abstract class Entity<TKey>
     public readonly struct ID
         : IEquatable<ID>, IComparable<ID>
     {
+        [JsonConstructor]
         public ID(TKey key) => this.Key = key;
 
         public TKey Key { get; }

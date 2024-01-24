@@ -16,6 +16,9 @@ public class StorageItem
     public StorageCell? Cell { get; private set; }
     public bool IsPlaced => CellId is not null;
 
+    #pragma warning disable CS8618
+    private StorageItem() : base(new ID(Guid.NewGuid())) { } 
+
     private StorageItem(Storage.ID storageId, Product.ID productId)
         : base(new ID(Guid.NewGuid()))
     {

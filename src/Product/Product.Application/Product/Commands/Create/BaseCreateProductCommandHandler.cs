@@ -15,16 +15,16 @@ public abstract class BaseCreateProductCommandHandler<TConcreteProductRequest, T
     where TConcreteProduct : BaseProduct
 {
     private readonly IProductRepository<TConcreteProduct> _productRepository;
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly ISession _session;
 
     private static Error CreateProductError(Error innerError) =>
         new("Product.Create", "Can not create new product.", innerError);
     public BaseCreateProductCommandHandler(
         IProductRepository<TConcreteProduct> productRepository,
-        IUnitOfWork unitOfWork)
+        ISession session)
     {
         _productRepository = productRepository;
-        _unitOfWork = unitOfWork;
+        _session = session;
     }
     protected abstract Result<TConcreteProduct> CreateConcreteProduct(TConcreteProductRequest request, ProductEntities productEntities);
 
@@ -53,7 +53,7 @@ public abstract class BaseCreateProductCommandHandler<TConcreteProductRequest, T
         }
 
         await _productRepository.AddAsync(concreteProduct, cancellationToken);
-        await _unitOfWork.SaveChangesAsync(cancellationToken);
+        await _session.StoreAsync(cancellationToken);
 
         return concreteProduct.Value.Id;
     }

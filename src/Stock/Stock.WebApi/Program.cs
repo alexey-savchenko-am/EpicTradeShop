@@ -1,5 +1,5 @@
-using Product.Application;
-using Product.Infrastructure;
+using Stock.Application;
+using Stock.Infrastructure;
 using Presentation;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
@@ -7,12 +7,12 @@ using Asp.Versioning.Builder;
 using Asp.Versioning;
 using AppCommon.Persistence;
 
-await new ProductServer(args).BuildAndRunAsync();
+await new StockService(args).BuildAndRunAsync();
 
-public class ProductServer : WebServer
+public class StockService : WebServer
 {
-    public ProductServer(string[] args)
-        : base(args, "ProductService")
+    public StockService(string[] args)
+        : base(args, "StockService")
     {
     }
 
@@ -25,14 +25,16 @@ public class ProductServer : WebServer
         }
     }
 
-    protected override void ConfigureSpecificServices(IServiceCollection services, IConfiguration configuration)
-    {
+    protected override void ConfigureSpecificServices(
+        IServiceCollection services, 
+        IConfiguration configuration)
+    {/*
         services
-            .AddApplication()
+            //.AddApplication()
             .AddInfrastructure(configuration)
             .AddPresentation(
-                Assembly.GetExecutingAssembly(), 
-                typeof(Product.Application.DependencyInjection).Assembly);
+                Assembly.GetExecutingAssembly(),
+                typeof(Product.Application.DependencyInjection).Assembly);*/
     }
 
     protected override ApiVersionSet ConfigureApiVersions(WebApplication app)

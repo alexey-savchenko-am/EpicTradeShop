@@ -25,9 +25,8 @@ public class BaseProduct
 	public IReadOnlyCollection<Category> Categories => _categories.AsReadOnly();
 	public IReadOnlyCollection<ProductImage> Images => _images.AsReadOnly();
 
-    protected BaseProduct()
-        : base(new ID(Guid.NewGuid()))
-    {}
+    #pragma warning disable CS8618
+    protected BaseProduct() : base(new ID(Guid.NewGuid())){}
 
 	protected BaseProduct(
         ProductType type, 
@@ -46,27 +45,6 @@ public class BaseProduct
         Material = material;
         StockQuantity = 0;
 		Status = ProductStatus.Draft;
-	}
-
-	public static Result<BaseProduct> Create(
-        ProductType type,
-        ProductDetails productDetails,
-        BrandModel brandModel,
-        DimensionsInfo dimensions,
-        Color color,
-        Material material)
-	{
-		var product = new BaseProduct(
-            type, 
-            productDetails, 
-            brandModel, 
-            dimensions, 
-            color, 
-            material);
-
-        product.RaiseDomainEvent(new ProductCreatedDomainEvent(product.Id));
-
-        return product;
 	}
 
 	public Result AddCategories(IEnumerable<string> categories)

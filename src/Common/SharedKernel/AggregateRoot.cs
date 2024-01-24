@@ -8,8 +8,8 @@ public abstract class AggregateRoot
     protected AggregateRoot(ID id) 
         : base(id) {}
 
-    public IReadOnlyCollection<IDomainEvent> DomainEvents 
-        => _domainEvents.AsReadOnly();
+    public IReadOnlyCollection<IDomainEvent> GetDomainEvents() 
+        => _domainEvents.ToList();
 
     public void ClearDomainEvents()
         => _domainEvents.Clear();

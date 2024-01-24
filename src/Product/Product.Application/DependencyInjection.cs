@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
 using AppCommon.Behaviors;
-using MediatR;
 
 namespace Product.Application;
 
@@ -13,6 +12,7 @@ public static class DependencyInjection
         services.AddMediatR(configuration => 
             { 
                 configuration.RegisterServicesFromAssembly(assembly);
+                configuration.AddOpenBehavior(typeof(LoggingBehavior<,>));
                 configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
             });
 

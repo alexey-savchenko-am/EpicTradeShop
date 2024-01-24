@@ -1,11 +1,10 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Product.Domain.DomainEvents;
 using Product.Domain.Enums;
 using SharedKernel.Enums;
 using SharedKernel.Output;
 using SharedKernel.ValueObjects;
 
 namespace Product.Domain.Entities.ProductAggregate.ConcreteProducts;
-
 public sealed class LaptopProduct
     : BaseProduct
 {
@@ -17,6 +16,7 @@ public sealed class LaptopProduct
     public StorageDevice Storage { get; private set; }
     public Battery Battery { get; private set; }
 
+    #pragma warning disable CS8618
     private LaptopProduct() : base() { }
 
     private LaptopProduct(
@@ -64,7 +64,7 @@ public sealed class LaptopProduct
         StorageDevice storage,
         Battery battery)
     {
-        return new LaptopProduct(
+        var laptopProduct =  new LaptopProduct(
             productDetails,
             brandModel,
             dimensions,
@@ -77,6 +77,10 @@ public sealed class LaptopProduct
             ram,
             storage,
             battery);
+
+        laptopProduct.RaiseDomainEvent(new ProductCreatedDomainEvent(laptopProduct.Id));
+
+        return laptopProduct;
     }
 
     public new Result Edit(

@@ -2,6 +2,7 @@
 using Asp.Versioning;
 using Asp.Versioning.Builder;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
@@ -63,11 +64,10 @@ public abstract class WebServer
             options.SubstituteApiVersionInUrl = true;
         });
 
-
-        ConfigureSpecificServices(services);
+        ConfigureSpecificServices(services, Builder.Configuration);
     }
 
-    protected abstract void ConfigureSpecificServices(IServiceCollection services);
+    protected abstract void ConfigureSpecificServices(IServiceCollection services, IConfiguration configuration);
 
     protected abstract ApiVersionSet ConfigureApiVersions(WebApplication app);
 
@@ -98,6 +98,8 @@ public abstract class WebServer
         app.UseAuthentication();
 
         app.UseAuthorization();
+
+        app.UseMiddleware<ValidationExceptionHandlingMiddleware>();
 
         app.UseSerilogRequestLogging();
 

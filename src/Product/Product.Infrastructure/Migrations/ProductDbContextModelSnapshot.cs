@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Product.Infrastructure;
+using Product.Infrastructure.Data;
 
 #nullable disable
 
@@ -49,6 +49,9 @@ namespace Product.Infrastructure.Migrations
 
                     b.Property<string>("Error")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MessageType")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("OccuredOnUtc")
                         .HasColumnType("datetime2");

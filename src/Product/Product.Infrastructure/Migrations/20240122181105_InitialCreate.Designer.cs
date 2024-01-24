@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Product.Infrastructure;
+using Product.Infrastructure.Data;
 
 #nullable disable
 
 namespace Product.Infrastructure.Migrations
 {
     [DbContext(typeof(ProductDbContext))]
-    [Migration("20240114165540_RenameColumnIsUpgradeable")]
-    partial class RenameColumnIsUpgradeable
+    [Migration("20240122181105_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,6 +52,9 @@ namespace Product.Infrastructure.Migrations
 
                     b.Property<string>("Error")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MessageType")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("OccuredOnUtc")
                         .HasColumnType("datetime2");

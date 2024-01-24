@@ -29,6 +29,7 @@ namespace Product.Infrastructure.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MessageType = table.Column<int>(type: "int", nullable: false),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     OccuredOnUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ProcessedOnUtc = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -88,7 +89,7 @@ namespace Product.Infrastructure.Migrations
                     RAMType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RAMVolumeGb = table.Column<int>(type: "int", nullable: false),
                     RAMFrequencyMgc = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
-                    RAMIsUpgradable = table.Column<bool>(type: "bit", nullable: false),
+                    RAMIsUpgradeable = table.Column<bool>(type: "bit", nullable: false),
                     StorageType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StorageVolumeGb = table.Column<int>(type: "int", nullable: false),
                     StorageIsUpgradeable = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),

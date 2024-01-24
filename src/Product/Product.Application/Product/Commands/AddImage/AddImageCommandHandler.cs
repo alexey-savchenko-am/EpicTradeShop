@@ -13,7 +13,7 @@ public class AddImageCommandHandler
 {
     private readonly IWebHostEnvironment _webHostEnvironment;
     private readonly IProductRepository<BaseProduct> _productRepository;
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly ISession _unitOfWork;
     private static HttpCodeError CanNotAddImageError(Error innerError, HttpStatusCode statusCode = HttpStatusCode.BadRequest)
         => new HttpCodeError("AddImage.Handle", "Can not add image.", statusCode, innerError);
 
@@ -22,7 +22,7 @@ public class AddImageCommandHandler
     public AddImageCommandHandler(
         IWebHostEnvironment webHostEnvironment,
         IProductRepository<BaseProduct> productRepository,
-        IUnitOfWork unitOfWork)
+        ISession unitOfWork)
     {
         _webHostEnvironment = webHostEnvironment;
         _productRepository = productRepository;
@@ -67,7 +67,7 @@ public class AddImageCommandHandler
             return CanNotAddImageError(addImageResult.Error);
         }
         
-        await _unitOfWork.SaveChangesAsync(cancellationToken);
+        await _unitOfWork.StoreAsync(cancellationToken);
 
         return Result.Success();
     }

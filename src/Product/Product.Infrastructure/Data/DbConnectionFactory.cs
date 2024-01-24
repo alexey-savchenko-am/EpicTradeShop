@@ -4,7 +4,7 @@ using Persistence;
 using Product.Application.Abstract;
 using System.Data;
 
-namespace Product.Infrastructure;
+namespace Product.Infrastructure.Data;
 
 internal sealed class DbConnectionFactory
     : IDbConnectionFactory
@@ -17,7 +17,7 @@ internal sealed class DbConnectionFactory
     }
     public IDbConnection GetConnection()
     {
-        var connection = new SqlConnection(_options.Value.ConnectionString);    
+        var connection = new SqlConnection(_options.Value.ConnectionString);
         connection.Open();
         return connection;
     }

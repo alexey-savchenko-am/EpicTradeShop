@@ -12,8 +12,8 @@ namespace Product.Application.Product.Commands.Create;
 public class CreateLaptopProductCommandHandler
     : BaseCreateProductCommandHandler<LaptopProductRequest, LaptopProduct>
 {
-    public CreateLaptopProductCommandHandler(IProductRepository<LaptopProduct> laptopProductRepository, IUnitOfWork unitOfWork)
-        : base(laptopProductRepository, unitOfWork)
+    public CreateLaptopProductCommandHandler(IProductRepository<LaptopProduct> laptopProductRepository, ISession session)
+        : base(laptopProductRepository, session)
     {}
 
     protected override Result<LaptopProduct> CreateConcreteProduct(

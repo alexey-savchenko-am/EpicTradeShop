@@ -2,16 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using SharedKernel.Output;
 using System.Data;
-using System.Diagnostics.Metrics;
 
 namespace Persistence;
 
-public sealed class UnitOfWork
-    : IUnitOfWork
+public sealed class Session
+    : ISession
 {
     private readonly DbContext _dbContext;
 
-    public UnitOfWork(DbContext dbContext)
+    public Session(DbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -44,7 +43,7 @@ public sealed class UnitOfWork
         return result;
     }
 
-    public Task SaveChangesAsync(CancellationToken ct = default)
+    public Task StoreAsync(CancellationToken ct = default)
     {
         return _dbContext.SaveChangesAsync(ct);
     }

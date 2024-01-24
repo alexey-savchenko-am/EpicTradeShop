@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using Newtonsoft.Json;
 using SharedKernel;
+using System.Text.Json;
 
 namespace Persistence.Interceptors;
 
@@ -26,7 +26,7 @@ public sealed class ConvertDomainEventsToOutboxMessagesInterceptor
                 .Select(x => x.Entity)
                 .SelectMany(aggregateRoot =>
                 {
-                    var domainEvents = aggregateRoot.DomainEvents;
+                    var domainEvents = aggregateRoot.GetDomainEvents();
                     aggregateRoot.ClearDomainEvents();
                     return domainEvents;
                 })
@@ -34,8 +34,9 @@ public sealed class ConvertDomainEventsToOutboxMessagesInterceptor
                 {
                     Id = Guid.NewGuid(),
                     OccuredOnUtc = DateTime.UtcNow,
-                    Type = domainEvent.GetType().Name,
-                    Content = JsonConvert.SerializeObject(domainEvent)
+                    Type = domainEvent.GetType().AssemblyQualifiedName!,
+                    MessageType = MessageType.DomainEvent,
+                    Content = JsonSerializer.Serialize(domainEvent, domainEvent.GetType())
                 })
                 .ToList();
 

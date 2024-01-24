@@ -10,7 +10,7 @@ using SharedKernel.ValueObjects;
 using System;
 using System.Text.Json;
 
-namespace Product.Infrastructure;
+namespace Product.Infrastructure.Data;
 
 internal class ProductDbContextSeed
     : IDatabaseInitializer
@@ -48,7 +48,7 @@ internal class ProductDbContextSeed
 
     private IEnumerable<LaptopProduct> SeedLaptopProducts()
     {
-        var product1 =  LaptopProduct.Create(
+        var product1 = LaptopProduct.Create(
                 ProductDetails.Create("Huawei MateBook D 15", "Huawei MateBook D 15"),
                 BrandModel.Create(Brand.HUAWEI, "BoDe - WDH9"),
                 DimensionsInfo.Create(width: 35.7m, height: 1.6m, length: 22.9m, weight: 1.56m),
@@ -63,7 +63,7 @@ internal class ProductDbContextSeed
                 Battery.Create(BatteryType.LiPol, cellCount: 3, capacityWh: 42, maxWorktimeHrs: 24));
 
         _logger.Information(JsonSerializer.Serialize(product1.Value));
-       
+
         var product2 = LaptopProduct.Create(
                 ProductDetails.Create("Digma Pro Sprint M DN15P3-8CXW02", "Digma Pro Sprint M DN15P3-8CXW02"),
                 BrandModel.Create(Brand.Digma, "Sprint M"),

@@ -3,7 +3,7 @@ using Persistence;
 using Product.Domain.Entities.ProductAggregate;
 using Product.Domain.Entities.ProductAggregate.ConcreteProducts;
 
-namespace Product.Infrastructure;
+namespace Product.Infrastructure.Data;
 
 internal class ProductDbContext
     : DbContextWithOutboxMessages
@@ -13,7 +13,7 @@ internal class ProductDbContext
     public DbSet<BaseProduct> Products { get; set; }
     public DbSet<LaptopProduct> LaptopProducts { get; set; }
 
-    public ProductDbContext(DbContextOptions<ProductDbContext> options) 
+    public ProductDbContext(DbContextOptions<ProductDbContext> options)
         : base(options)
     {
     }
